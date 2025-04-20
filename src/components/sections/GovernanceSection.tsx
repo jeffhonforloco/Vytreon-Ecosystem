@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Users, MessageCircle, Heart, RefreshCw, BarChart3 } from 'lucide-react';
+import { Users, MessageCircle, Heart, RefreshCw, BarChart3, Cpu, Layers } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 
 const GovernanceSection = () => {

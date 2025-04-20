@@ -1,7 +1,6 @@
-
 import React, { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Shield, Database, Layers, Network, Lock, Cpu } from 'lucide-react';
+import { Shield, Database, Layers, Network, Lock, Cpu, Fingerprint } from 'lucide-react';
 
 const EcosystemSection = () => {
   const [activeTab, setActiveTab] = useState("architecture");
