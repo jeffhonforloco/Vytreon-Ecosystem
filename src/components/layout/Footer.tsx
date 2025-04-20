@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Twitter, Github, Linkedin } from 'lucide-react';
+import { Twitter, Github, Linkedin, Database, Activity, Search, Brain, MessageSquare, Share2, Video, FileText, Headphones } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -33,11 +32,58 @@ const Footer = () => {
           <div className="col-span-1">
             <h3 className="text-white font-semibold mb-4">Products</h3>
             <ul className="space-y-2">
-              <li><Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Oowo</Link></li>
-              <li><Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">NFTchords</Link></li>
-              <li><Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Escazo</Link></li>
-              <li><Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">WhisApp</Link></li>
-              <li><Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Chattrer</Link></li>
+              <li className="flex items-center gap-2">
+                <Database size={16} className="text-vytreon-cyan" />
+                <Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Oowo</Link>
+              </li>
+              <li className="flex items-center gap-2">
+                <Database size={16} className="text-vytreon-cyan" />
+                <Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Escazo</Link>
+              </li>
+              <li className="flex items-center gap-2">
+                <Activity size={16} className="text-vytreon-cyan" />
+                <Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Didit360</Link>
+              </li>
+              <li className="flex items-center gap-2">
+                <Search size={16} className="text-vytreon-cyan" />
+                <Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">SEOAgentPro</Link>
+              </li>
+              <li className="flex items-center gap-2">
+                <Brain size={16} className="text-vytreon-cyan" />
+                <Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">SireIQ</Link>
+              </li>
+              <li className="flex items-center gap-2">
+                <MessageSquare size={16} className="text-vytreon-cyan" />
+                <Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">WhisApp</Link>
+              </li>
+              <li className="flex items-center gap-2">
+                <Share2 size={16} className="text-vytreon-cyan" />
+                <Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">iXhare</Link>
+              </li>
+              <li className="flex items-center gap-2">
+                <Video size={16} className="text-vytreon-cyan" />
+                <Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Voxsaga</Link>
+              </li>
+              <li className="flex items-center gap-2">
+                <FileText size={16} className="text-vytreon-cyan" />
+                <Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Fycera</Link>
+              </li>
+              <li className="flex items-center gap-2">
+                <FileText size={16} className="text-vytreon-cyan" />
+                <Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Fycra</Link>
+              </li>
+              <li className="flex items-center gap-2">
+                <Headphones size={16} className="text-vytreon-cyan" />
+                <Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Auralora</Link>
+              </li>
+              <li className="flex items-center gap-2">
+                <MessageSquare size={16} className="text-vytreon-cyan" />
+                <Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Chattrer</Link>
+              </li>
+              <li className="flex items-center gap-2">
+                <Brain size={16} className="text-vytreon-cyan" />
+                <Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">ComnIQ</Link>
+              </li>
             </ul>
           </div>
 
