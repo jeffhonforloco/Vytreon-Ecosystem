@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ShieldCheck, Globe, Layers } from 'lucide-react';
@@ -13,23 +12,23 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 z-10 py-16">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="w-full lg:w-1/2">
-            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
               <span className="text-gradient animate-background-shine">
                 Transforming Digital Ecosystems
               </span>
             </h1>
-            <p className="text-gray-300 text-lg mb-8 max-w-2xl">
+            <p className="text-gray-300 text-lg mb-8 max-w-2xl font-medium">
               Vytreon Group is building a decentralized ecosystem that spans mobility, finance, 
               energy, digital payments, content creation, and metaverse infrastructure with 
               immersive experiences and AI-powered personalization.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white font-medium px-6 py-6 rounded-lg flex items-center gap-2 group">
+              <Button className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white font-bold px-6 py-6 rounded-lg flex items-center gap-2 group">
                 Explore Ecosystem
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" className="border-vytreon-cyan text-white hover:bg-vytreon-cyan/10 px-6 py-6 rounded-lg">
+              <Button variant="outline" className="border-vytreon-cyan text-white hover:bg-vytreon-cyan/10 px-6 py-6 rounded-lg font-bold">
                 View Roadmap
               </Button>
             </div>
@@ -39,7 +38,7 @@ const HeroSection = () => {
                 <div className="h-12 w-12 rounded-full bg-vytreon-cyan/10 flex items-center justify-center mb-3">
                   <ShieldCheck className="h-6 w-6 text-vytreon-cyan" />
                 </div>
-                <h3 className="font-medium text-white">Security</h3>
+                <h3 className="font-bold text-white">Security</h3>
               </div>
               <div className="flex flex-col items-center text-center p-3">
                 <div className="h-12 w-12 rounded-full bg-vytreon-cyan/10 flex items-center justify-center mb-3">

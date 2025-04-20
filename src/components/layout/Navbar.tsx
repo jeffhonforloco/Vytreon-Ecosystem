@@ -45,7 +45,7 @@ const Navbar = () => {
             alt="Vytreon Logo" 
             className="h-10 w-auto" 
           />
-          <span className="font-heading text-xl font-bold text-white">Vytreon</span>
+          <span className="font-heading text-xl font-extrabold text-white">Vytreon</span>
         </Link>
 
         {/* Desktop Menu */}
@@ -54,12 +54,12 @@ const Navbar = () => {
             <button 
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className="text-white hover:text-vytreon-cyan transition-colors cursor-pointer"
+              className="text-white hover:text-vytreon-cyan transition-colors cursor-pointer font-semibold"
             >
               {item.label}
             </button>
           ))}
-          <Button className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white">
+          <Button className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white font-bold">
             Connect
           </Button>
         </div>
@@ -81,12 +81,12 @@ const Navbar = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-white hover:text-vytreon-cyan px-2 py-2 transition-colors cursor-pointer"
+                className="text-white hover:text-vytreon-cyan px-2 py-2 transition-colors cursor-pointer font-semibold"
               >
                 {item.label}
               </button>
             ))}
-            <Button className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white w-full">
+            <Button className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white w-full font-bold">
               Connect
             </Button>
           </div>
