@@ -1,8 +1,20 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ShieldCheck, Globe, Layers } from 'lucide-react';
 
 const HeroSection = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offsetTop = element.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({
+        top: offsetTop - 80, // Offset for the navbar height
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <div className="relative min-h-screen pt-20 flex items-center overflow-hidden">
       {/* Background effects */}
@@ -24,11 +36,18 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white font-bold px-6 py-6 rounded-lg flex items-center gap-2 group">
+              <Button 
+                onClick={() => scrollToSection('ecosystem')}
+                className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white font-bold px-6 py-6 rounded-lg flex items-center gap-2 group"
+              >
                 Explore Ecosystem
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" className="border-vytreon-cyan text-white hover:bg-vytreon-cyan/10 px-6 py-6 rounded-lg font-bold">
+              <Button 
+                onClick={() => scrollToSection('governance')}
+                variant="outline" 
+                className="border-vytreon-cyan text-white hover:bg-vytreon-cyan/10 px-6 py-6 rounded-lg font-bold"
+              >
                 View Roadmap
               </Button>
             </div>
