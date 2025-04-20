@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Users, MessageCircle, Heart, RefreshCw, BarChart3, Cpu, Layers } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
@@ -174,38 +173,6 @@ const GovernanceSection = () => {
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="glass-card neon-border p-6">
-            <h4 className="font-heading text-xl font-bold text-white mb-4">DevOps & Scalability</h4>
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <div className="rounded-full bg-vytreon-cyan/10 p-2">
-                  <BarChart3 size={18} className="text-vytreon-cyan" />
-                </div>
-                <div>
-                  <h5 className="text-white text-sm font-medium">Bolt.new Project Setup</h5>
-                  <p className="text-gray-400 text-xs">One-click project initialization</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="rounded-full bg-vytreon-cyan/10 p-2">
-                  <Cpu size={18} className="text-vytreon-cyan" />
-                </div>
-                <div>
-                  <h5 className="text-white text-sm font-medium">AI Optimization</h5>
-                  <p className="text-gray-400 text-xs">Automated code & system tuning</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="rounded-full bg-vytreon-cyan/10 p-2">
-                  <Layers size={18} className="text-vytreon-cyan" />
-                </div>
-                <div>
-                  <h5 className="text-white text-sm font-medium">Layer 2 Scaling</h5>
-                  <p className="text-gray-400 text-xs">High throughput transaction handling</p>
-                </div>
-              </div>
-            </div>
-          </div>
           
           <div className="glass-card neon-border p-6">
             <h4 className="font-heading text-xl font-bold text-white mb-4">Launch Strategy</h4>
