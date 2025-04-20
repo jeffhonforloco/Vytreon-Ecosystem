@@ -1,27 +1,39 @@
 
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { useState } from 'react';
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const location = useLocation();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  const isActive = (path: string) => {
-    return location.pathname === path ? "text-vytreon-cyan" : "text-white";
+  const scrollToSection = (sectionId: string) => {
+    setMobileMenuOpen(false); // Close mobile menu when clicking an item
+    
+    // Find the element to scroll to
+    const element = document.getElementById(sectionId);
+    if (element) {
+      // Adding a small delay to ensure UI updates before scrolling
+      setTimeout(() => {
+        const offsetTop = element.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: offsetTop - 80, // Offset for the navbar height
+          behavior: 'smooth'
+        });
+      }, 100);
+    }
   };
 
   const menuItems = [
-    { path: '/', label: 'Home' },
-    { path: '/vision', label: 'Vision' },
-    { path: '/ecosystem', label: 'Ecosystem' },
-    { path: '/governance', label: 'Governance' },
+    { id: 'hero', label: 'Home' },
+    { id: 'vision', label: 'Vision' },
+    { id: 'ecosystem', label: 'Ecosystem' },
+    { id: 'governance', label: 'Governance' },
   ];
 
   return (
@@ -39,13 +51,13 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
           {menuItems.map((item) => (
-            <Link 
-              key={item.path}
-              to={item.path}
-              className={`${isActive(item.path)} hover:text-vytreon-cyan transition-colors`}
+            <button 
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className="text-white hover:text-vytreon-cyan transition-colors cursor-pointer"
             >
               {item.label}
-            </Link>
+            </button>
           ))}
           <Button className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white">
             Connect
@@ -66,14 +78,13 @@ const Navbar = () => {
         <div className="md:hidden bg-vytreon-dark-blue/95 backdrop-blur-lg border-b border-vytreon-cyan/20 px-4 py-4 animate-fade-in">
           <div className="flex flex-col space-y-4">
             {menuItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`${isActive(item.path)} hover:text-vytreon-cyan px-2 py-2 transition-colors`}
-                onClick={() => setMobileMenuOpen(false)}
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="text-white hover:text-vytreon-cyan px-2 py-2 transition-colors cursor-pointer"
               >
                 {item.label}
-              </Link>
+              </button>
             ))}
             <Button className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white w-full">
               Connect
