@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Twitter, Github, Linkedin, Database, Activity, Search, Brain, MessageSquare, Share2, Video, FileText, Headphones } from 'lucide-react';
+import { Twitter, Github, Linkedin, Database, Activity, Search, Brain, MessageSquare, Share2, Video, FileText, Headphones, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -111,7 +111,18 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 mb-4 md:mb-0">&copy; {new Date().getFullYear()} Vytreon Group. All rights reserved.</p>
+          <div className="flex items-center space-x-4">
+            <p className="text-gray-500 mb-4 md:mb-0 flex items-center gap-2">
+              <Mail size={16} className="text-vytreon-cyan" />
+              <a 
+                href="mailto:info@vytreon.com" 
+                className="hover:text-vytreon-cyan transition-colors"
+              >
+                info@vytreon.com
+              </a>
+            </p>
+            <p className="text-gray-500 mb-4 md:mb-0">&copy; {new Date().getFullYear()} Vytreon Group. All rights reserved.</p>
+          </div>
           <div className="flex space-x-6">
             <Link to="#" className="text-gray-500 hover:text-vytreon-cyan transition-colors">Privacy Policy</Link>
             <Link to="#" className="text-gray-500 hover:text-vytreon-cyan transition-colors">Terms of Service</Link>
