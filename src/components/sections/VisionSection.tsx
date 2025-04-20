@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Fingerprint, Users, Globe, Lock, Zap } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
@@ -8,27 +8,32 @@ const VisionSection = () => {
     {
       icon: <Fingerprint size={32} className="text-vytreon-cyan" />,
       title: "Self-Sovereign Identity",
-      description: "Empowering users with complete ownership and control over their digital identities and personal data."
+      description: "Empowering users with complete ownership and control over their digital identities and personal data.",
+      link: "/governance"
     },
     {
       icon: <Users size={32} className="text-vytreon-cyan" />,
-      title: "Community Governance",
-      description: "Decentralized decision-making through DAO structures, ensuring transparent and equitable system evolution."
+      title: "Community Governance", 
+      description: "Decentralized decision-making through DAO structures, ensuring transparent and equitable system evolution.",
+      link: "/governance"
     },
     {
       icon: <Globe size={32} className="text-vytreon-cyan" />,
       title: "Cross-Platform Innovation",
-      description: "Seamless experiences across mobility, finance, energy, and digital content creation platforms."
+      description: "Seamless experiences across mobility, finance, energy, and digital content creation platforms.",
+      link: "/ecosystem"
     },
     {
       icon: <Lock size={32} className="text-vytreon-cyan" />,
       title: "Zero-Trust Security",
-      description: "End-to-end encryption and advanced security protocols to safeguard user data and transactions."
+      description: "End-to-end encryption and advanced security protocols to safeguard user data and transactions.",
+      link: "/ecosystem"
     },
     {
       icon: <Zap size={32} className="text-vytreon-cyan" />,
       title: "Immersive Experiences",
-      description: "Next-generation interfaces combining AR/VR with AI personalization for deeply engaging interactions."
+      description: "Next-generation interfaces combining AR/VR with AI personalization for deeply engaging interactions.",
+      link: "/ecosystem"
     }
   ];
 
@@ -46,11 +51,13 @@ const VisionSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {visionCards.map((card, index) => (
-            <Card key={index} className="glass-card neon-border p-6 transition-transform hover:translate-y-[-5px]">
-              <div className="mb-4">{card.icon}</div>
-              <h3 className="text-xl font-heading font-bold text-white mb-2">{card.title}</h3>
-              <p className="text-gray-400">{card.description}</p>
-            </Card>
+            <Link to={card.link} key={index}>
+              <Card className="glass-card neon-border p-6 transition-all duration-300 hover:translate-y-[-5px] hover:shadow-lg hover:shadow-vytreon-cyan/20 cursor-pointer group">
+                <div className="mb-4 transition-transform group-hover:scale-110">{card.icon}</div>
+                <h3 className="text-xl font-heading font-bold text-white mb-2 group-hover:text-vytreon-cyan transition-colors">{card.title}</h3>
+                <p className="text-gray-400">{card.description}</p>
+              </Card>
+            </Link>
           ))}
         </div>
         
