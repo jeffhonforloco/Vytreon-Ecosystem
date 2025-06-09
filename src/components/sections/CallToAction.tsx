@@ -4,6 +4,14 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 
 const CallToAction = () => {
+  const handleGetNotified = () => {
+    window.open('https://vytreon.com/notify', '_blank');
+  };
+
+  const handleReadDocumentation = () => {
+    window.open('https://docs.vytreon.com', '_blank');
+  };
+
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-radial from-vytreon-cyan/10 to-transparent"></div>
@@ -16,11 +24,18 @@ const CallToAction = () => {
           </p>
           
           <div className="flex flex-wrap justify-center gap-4">
-            <Button className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white px-8 py-6 rounded-lg flex items-center gap-2 group">
-              Get Started
+            <Button 
+              onClick={handleGetNotified}
+              className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white px-8 py-6 rounded-lg flex items-center gap-2 group"
+            >
+              Get Launch Updates
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" className="border-vytreon-cyan text-white hover:bg-vytreon-cyan/10 px-8 py-6 rounded-lg">
+            <Button 
+              onClick={handleReadDocumentation}
+              variant="outline" 
+              className="border-vytreon-cyan text-white hover:bg-vytreon-cyan/10 px-8 py-6 rounded-lg"
+            >
               Read Documentation
             </Button>
           </div>
@@ -28,19 +43,19 @@ const CallToAction = () => {
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-1">15+</div>
-              <p className="text-gray-400">Integrated Services</p>
+              <p className="text-gray-400">Products in Development</p>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-1">99.9%</div>
-              <p className="text-gray-400">Uptime</p>
+              <p className="text-gray-400">Target Uptime</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-1">18K+</div>
-              <p className="text-gray-400">Community Members</p>
+              <div className="text-3xl font-bold text-white mb-1">2K+</div>
+              <p className="text-gray-400">Early Subscribers</p>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-1">24/7</div>
-              <p className="text-gray-400">Support</p>
+              <p className="text-gray-400">Planned Support</p>
             </div>
           </div>
         </div>

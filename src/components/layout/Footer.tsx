@@ -4,7 +4,7 @@ import { Twitter, Github, Linkedin, Database, Activity, Search, Brain, MessageSq
 
 const Footer = () => {
   const handleEmailClick = () => {
-    window.location.href = 'mailto:info@vytreon.com';
+    window.location.href = 'mailto:contact@vytreon.com';
   };
 
   const handleSocialClick = (platform: string) => {
@@ -41,12 +41,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-1">
             <img 
-              src="/lovable-uploads/b4d5b24d-df73-4dd8-a6a9-2ec42b8d226d.png" 
+              src="/lovable-uploads/8e349754-a378-4d24-aa39-58005d777cc5.png" 
               alt="Vytreon Logo" 
               className="h-12 w-auto mb-4" 
             />
             <p className="text-gray-400 mb-4">
-              Building the decentralized future through innovation, security, and community governance.
+              Building the future of integrated digital ecosystems through innovation, collaboration, and cutting-edge technology.
             </p>
             <div className="flex space-x-4">
               <button 
@@ -204,7 +204,7 @@ const Footer = () => {
                 onClick={handleEmailClick}
                 className="hover:text-vytreon-cyan transition-colors"
               >
-                info@vytreon.com
+                contact@vytreon.com
               </button>
             </p>
             <p className="text-gray-500 mb-4 md:mb-0">&copy; {new Date().getFullYear()} Vytreon Group. All rights reserved.</p>

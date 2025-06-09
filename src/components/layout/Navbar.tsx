@@ -27,9 +27,8 @@ const Navbar = () => {
     }
   };
 
-  const handleStartTrial = () => {
-    // Redirect to sign-up or trial page
-    window.open('https://app.vytreon.com/signup', '_blank');
+  const handleGetNotified = () => {
+    window.open('https://vytreon.com/notify', '_blank');
   };
 
   const menuItems = [
@@ -44,7 +43,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
           <img 
-            src="/lovable-uploads/b4d5b24d-df73-4dd8-a6a9-2ec42b8d226d.png" 
+            src="/lovable-uploads/8e349754-a378-4d24-aa39-58005d777cc5.png" 
             alt="Vytreon Logo" 
             className="h-10 w-auto" 
           />
@@ -63,10 +62,10 @@ const Navbar = () => {
             </button>
           ))}
           <Button 
-            onClick={handleStartTrial}
+            onClick={handleGetNotified}
             className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white font-bold px-6 py-2"
           >
-            Start Free Trial
+            Get Notified
           </Button>
         </div>
 
@@ -93,10 +92,10 @@ const Navbar = () => {
               </button>
             ))}
             <Button 
-              onClick={handleStartTrial}
+              onClick={handleGetNotified}
               className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white w-full font-bold"
             >
-              Start Free Trial
+              Get Notified
             </Button>
           </div>
         </div>
