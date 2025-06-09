@@ -17,50 +17,56 @@ const modules = [
   {
     id: "identity",
     title: "Decentralized Identity",
-    description: "Self-sovereign identity management with SSI protocols",
+    description: "Self-sovereign identity management with blockchain verification",
     icon: Shield,
     status: "Active",
-    color: "text-green-400"
+    color: "text-green-400",
+    metrics: "2,847 identities verified"
   },
   {
     id: "blockchain",
     title: "Blockchain Network",
-    description: "Multi-chain integration with smart contracts",
+    description: "Multi-chain integration with smart contract automation",
     icon: Link,
     status: "Connected",
-    color: "text-vytreon-cyan"
+    color: "text-vytreon-cyan",
+    metrics: "15.2K transactions/day"
   },
   {
     id: "ai",
     title: "AI Engine",
-    description: "SireIQ & CumnIQ for personalization and analytics",
+    description: "Advanced analytics and personalization algorithms",
     icon: Brain,
     status: "Learning",
-    color: "text-vytreon-purple"
+    color: "text-vytreon-purple",
+    metrics: "94.7% accuracy rate"
   },
   {
     id: "dao",
     title: "DAO Governance",
-    description: "Community-driven decision making",
+    description: "Community-driven decision making and voting system",
     icon: Users,
-    status: "Voting",
-    color: "text-yellow-400"
+    status: "Active Voting",
+    color: "text-yellow-400",
+    metrics: "1,247 active voters"
   },
   {
     id: "security",
     title: "Security Layer",
-    description: "End-to-end encryption and zero-trust protocols",
+    description: "Zero-trust architecture with end-to-end encryption",
     icon: Lock,
     status: "Secured",
-    color: "text-red-400"
+    color: "text-red-400",
+    metrics: "100% threat prevention"
   },
   {
     id: "storage",
     title: "IPFS Storage",
-    description: "Decentralized file storage and content delivery",
+    description: "Distributed storage network for decentralized content",
     icon: Database,
     status: "Syncing",
-    color: "text-blue-400"
+    color: "text-blue-400",
+    metrics: "847 GB distributed"
   }
 ];
 
@@ -70,7 +76,7 @@ const ModuleGrid = () => {
       <div className="flex items-center justify-between">
         <h3 className="text-2xl font-bold text-white">Core Modules</h3>
         <Button variant="outline" className="border-vytreon-cyan text-vytreon-cyan hover:bg-vytreon-cyan hover:text-vytreon-dark">
-          View All Modules
+          Manage Modules
           <ArrowRight size={16} className="ml-2" />
         </Button>
       </div>
@@ -85,7 +91,7 @@ const ModuleGrid = () => {
                   <div className="p-2 rounded-lg bg-vytreon-dark-blue">
                     <Icon className={`${module.color}`} size={24} />
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <CardTitle className="text-white group-hover:text-vytreon-cyan transition-colors">
                       {module.title}
                     </CardTitle>
@@ -97,9 +103,10 @@ const ModuleGrid = () => {
                 </div>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-gray-300">
+                <CardDescription className="text-gray-300 mb-2">
                   {module.description}
                 </CardDescription>
+                <p className="text-sm text-vytreon-cyan font-medium">{module.metrics}</p>
               </CardContent>
             </Card>
           );

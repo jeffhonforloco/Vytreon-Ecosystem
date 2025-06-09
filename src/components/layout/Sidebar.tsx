@@ -39,11 +39,11 @@ const Sidebar = ({ activeModule, setActiveModule }: SidebarProps) => {
       <div className="p-6">
         <div className="flex items-center space-x-3">
           <img 
-            src="/lovable-uploads/9eaeacea-ce34-458b-a782-0e53e07980ef.png" 
+            src="/lovable-uploads/e4968298-7baf-4630-b38d-3a8b8bc28b42.png" 
             alt="Vytreon Logo" 
             className="w-10 h-10"
           />
-          <h1 className="text-xl font-bold text-vytreon-cyan">Vytreon MVP</h1>
+          <h1 className="text-xl font-bold text-vytreon-cyan">Vytreon</h1>
         </div>
       </div>
       

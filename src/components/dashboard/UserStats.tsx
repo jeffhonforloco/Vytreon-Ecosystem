@@ -4,32 +4,32 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 const stats = [
   {
-    title: "Total Transactions",
-    value: "1,247",
-    change: "+12.5%",
+    title: "Network Activity",
+    value: "15,247",
+    change: "+23.8%",
     trend: "up",
-    description: "Last 30 days"
+    description: "Transactions this month"
   },
   {
-    title: "DAO Participation",
-    value: "87%",
-    change: "+5.2%",
+    title: "Community Engagement",
+    value: "89.3%",
+    change: "+7.2%",
     trend: "up",
-    description: "Active voting rate"
+    description: "Active participation rate"
   },
   {
-    title: "Storage Used",
-    value: "2.4 GB",
-    change: "-0.8%",
-    trend: "down",
-    description: "IPFS network"
+    title: "Storage Efficiency",
+    value: "847 GB",
+    change: "+12.4%",
+    trend: "up",
+    description: "Distributed across network"
   },
   {
-    title: "AI Predictions",
-    value: "94.2%",
-    change: "+2.1%",
+    title: "Security Score",
+    value: "99.8%",
+    change: "+0.3%",
     trend: "up",
-    description: "Accuracy rate"
+    description: "Threat prevention rate"
   }
 ];
 
@@ -39,9 +39,9 @@ const UserStats = () => {
       <CardHeader>
         <CardTitle className="text-white flex items-center space-x-2">
           <Activity className="text-vytreon-cyan" size={20} />
-          <span>User Statistics</span>
+          <span>Performance Metrics</span>
         </CardTitle>
-        <CardDescription>Your ecosystem performance metrics</CardDescription>
+        <CardDescription>Real-time ecosystem analytics</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         {stats.map((stat, index) => (
