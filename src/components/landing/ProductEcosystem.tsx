@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card } from '@/components/ui/card';
-import { Database, Activity, Search, Brain, MessageSquare, Share2, Video, FileText, Headphones } from 'lucide-react';
+import { Database, Activity, Search, Brain, MessageSquare, Share2, Video, FileText, Headphones, CreditCard, Plane, Music } from 'lucide-react';
 
 const ProductEcosystem = () => {
   const productCategories = [
@@ -32,18 +32,27 @@ const ProductEcosystem = () => {
       products: [
         { name: "Voxsaga", description: "Video content platform", icon: <Video size={24} /> },
         { name: "Auralora", description: "Audio content management", icon: <Headphones size={24} /> },
+        { name: "Didit360", description: "Complete Music & Digital Media Universe", icon: <Music size={24} /> },
         { name: "Fycera", description: "Document management", icon: <FileText size={24} /> },
         { name: "Fycra", description: "Advanced documentation", icon: <FileText size={24} /> },
       ]
     },
     {
-      title: "Data & Analytics",
-      description: "Manage and analyze your business data",
+      title: "Commerce & Travel",
+      description: "Payments, trading, and travel solutions",
       color: "from-vytreon-cyan to-vytreon-blue",
       products: [
-        { name: "Oowo", description: "Unified data platform", icon: <Database size={24} /> },
-        { name: "Escazo", description: "Data visualization", icon: <Database size={24} /> },
-        { name: "Didit360", description: "Comprehensive analytics", icon: <Activity size={24} /> },
+        { name: "Oowo", description: "Payments solution and trade platform", icon: <CreditCard size={24} /> },
+        { name: "Escazo", description: "All in One travel platform", icon: <Plane size={24} /> },
+      ]
+    },
+    {
+      title: "Data & Analytics",
+      description: "Manage and analyze your business data",
+      color: "from-vytreon-blue to-vytreon-purple",
+      products: [
+        { name: "Analytics Pro", description: "Business intelligence dashboard", icon: <Database size={24} /> },
+        { name: "Data Insights", description: "Advanced data visualization", icon: <Activity size={24} /> },
       ]
     }
   ];
@@ -61,7 +70,7 @@ const ProductEcosystem = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
           {productCategories.map((category, index) => (
             <Card key={index} className="glass-card neon-border p-8 group hover:scale-105 transition-all duration-300">
               <div className={`h-2 w-full bg-gradient-to-r ${category.color} rounded-full mb-6`}></div>
