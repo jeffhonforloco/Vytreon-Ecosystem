@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Database, Activity, Search, Brain, MessageSquare, Share2, Video, FileText, Headphones, CreditCard, Plane, Music } from 'lucide-react';
@@ -9,7 +8,12 @@ const ProductEcosystem = () => {
       'Oowo': 'https://www.oowo.io',
       'Escazo': 'https://www.escazo.com',
       'Didit360': 'https://www.didit360.com',
-      'WhisApp': 'https://www.whisapp.com'
+      'WhisApp': 'https://whisapp.com',
+      'iXhare': 'https://ixhare.com',
+      'SireIQ': 'https://www.sireiQ.com',
+      'Voxsaga': 'https://voxsaga.com',
+      'SEOAgentPro': 'https://seoagentpro.com',
+      'CumnIQ': 'https://cumniq.com'
     };
     
     const url = productUrls[productName as keyof typeof productUrls];
@@ -29,7 +33,7 @@ const ProductEcosystem = () => {
       products: [
         { name: "WhisApp", description: "Your Audio Travel Companion", icon: <MessageSquare size={24} />, hasUrl: true },
         { name: "Chattrer", description: "Advanced chat features", icon: <MessageSquare size={24} />, hasUrl: false },
-        { name: "iXhare", description: "Smart content sharing", icon: <Share2 size={24} />, hasUrl: false },
+        { name: "iXhare", description: "Smart content sharing", icon: <Share2 size={24} />, hasUrl: true },
       ]
     },
     {
@@ -37,9 +41,9 @@ const ProductEcosystem = () => {
       description: "Harness the power of artificial intelligence",
       color: "from-vytreon-blue to-vytreon-purple",
       products: [
-        { name: "SireIQ", description: "Business intelligence AI", icon: <Brain size={24} />, hasUrl: false },
-        { name: "CumnIQ", description: "Communication AI assistant", icon: <Brain size={24} />, hasUrl: false },
-        { name: "SEOAgentPro", description: "AI-powered SEO optimization", icon: <Search size={24} />, hasUrl: false },
+        { name: "SireIQ", description: "Business intelligence AI", icon: <Brain size={24} />, hasUrl: true },
+        { name: "CumnIQ", description: "Communication AI assistant", icon: <Brain size={24} />, hasUrl: true },
+        { name: "SEOAgentPro", description: "AI-powered SEO optimization", icon: <Search size={24} />, hasUrl: true },
       ]
     },
     {
@@ -47,7 +51,7 @@ const ProductEcosystem = () => {
       description: "Create, manage, and distribute content",
       color: "from-vytreon-purple to-vytreon-cyan",
       products: [
-        { name: "Voxsaga", description: "Video content platform", icon: <Video size={24} />, hasUrl: false },
+        { name: "Voxsaga", description: "Video content platform", icon: <Video size={24} />, hasUrl: true },
         { name: "Auralora", description: "Audio content management", icon: <Headphones size={24} />, hasUrl: false },
         { name: "Didit360", description: "Complete Music & Digital Media Universe", icon: <Music size={24} />, hasUrl: true },
         { name: "Fycera", description: "Create Stunning Videos with AI", icon: <Video size={24} />, hasUrl: false },

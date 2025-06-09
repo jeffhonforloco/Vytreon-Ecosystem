@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Twitter, Github, Linkedin, Database, Activity, Search, Brain, MessageSquare, Share2, Video, FileText, Headphones, Mail } from 'lucide-react';
@@ -22,7 +21,12 @@ const Footer = () => {
       'Oowo': 'https://www.oowo.io',
       'Escazo': 'https://www.escazo.com',
       'Didit360': 'https://www.didit360.com',
-      'WhisApp': 'https://www.whisapp.com'
+      'WhisApp': 'https://whisapp.com',
+      'iXhare': 'https://ixhare.com',
+      'SireIQ': 'https://www.sireiQ.com',
+      'Voxsaga': 'https://voxsaga.com',
+      'SEOAgentPro': 'https://seoagentpro.com',
+      'CumnIQ': 'https://cumniq.com'
     };
     
     const url = productUrls[productName as keyof typeof productUrls];
@@ -98,11 +102,21 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Search size={16} className="text-vytreon-cyan" />
-                <Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">SEOAgentPro</Link>
+                <button 
+                  onClick={() => handleProductClick('SEOAgentPro')}
+                  className="text-gray-400 hover:text-vytreon-cyan transition-colors text-left"
+                >
+                  SEOAgentPro
+                </button>
               </li>
               <li className="flex items-center gap-2">
                 <Brain size={16} className="text-vytreon-cyan" />
-                <Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">SireIQ</Link>
+                <button 
+                  onClick={() => handleProductClick('SireIQ')}
+                  className="text-gray-400 hover:text-vytreon-cyan transition-colors text-left"
+                >
+                  SireIQ
+                </button>
               </li>
               <li className="flex items-center gap-2">
                 <MessageSquare size={16} className="text-vytreon-cyan" />
@@ -115,11 +129,21 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Share2 size={16} className="text-vytreon-cyan" />
-                <Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">iXhare</Link>
+                <button 
+                  onClick={() => handleProductClick('iXhare')}
+                  className="text-gray-400 hover:text-vytreon-cyan transition-colors text-left"
+                >
+                  iXhare
+                </button>
               </li>
               <li className="flex items-center gap-2">
                 <Video size={16} className="text-vytreon-cyan" />
-                <Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Voxsaga</Link>
+                <button 
+                  onClick={() => handleProductClick('Voxsaga')}
+                  className="text-gray-400 hover:text-vytreon-cyan transition-colors text-left"
+                >
+                  Voxsaga
+                </button>
               </li>
               <li className="flex items-center gap-2">
                 <FileText size={16} className="text-vytreon-cyan" />
@@ -139,7 +163,12 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Brain size={16} className="text-vytreon-cyan" />
-                <Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">ComnIQ</Link>
+                <button 
+                  onClick={() => handleProductClick('CumnIQ')}
+                  className="text-gray-400 hover:text-vytreon-cyan transition-colors text-left"
+                >
+                  CumnIQ
+                </button>
               </li>
             </ul>
           </div>
