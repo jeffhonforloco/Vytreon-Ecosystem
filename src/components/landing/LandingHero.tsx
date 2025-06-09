@@ -15,6 +15,10 @@ const LandingHero = () => {
     }
   };
 
+  const handleStartTrial = () => {
+    window.open('https://app.vytreon.com/signup', '_blank');
+  };
+
   return (
     <section id="hero" className="relative min-h-screen pt-20 flex items-center overflow-hidden">
       {/* Background effects */}

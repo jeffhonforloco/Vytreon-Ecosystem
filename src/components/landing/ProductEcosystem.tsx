@@ -4,15 +4,32 @@ import { Card } from '@/components/ui/card';
 import { Database, Activity, Search, Brain, MessageSquare, Share2, Video, FileText, Headphones, CreditCard, Plane, Music } from 'lucide-react';
 
 const ProductEcosystem = () => {
+  const handleProductClick = (productName: string) => {
+    const productUrls = {
+      'Oowo': 'https://www.oowo.io',
+      'Escazo': 'https://www.escazo.com',
+      'Didit360': 'https://www.didit360.com',
+      'WhisApp': 'https://www.whisapp.com'
+    };
+    
+    const url = productUrls[productName as keyof typeof productUrls];
+    if (url) {
+      window.open(url, '_blank');
+    } else {
+      // For products without URLs yet, show coming soon
+      alert(`${productName} is coming soon! Stay tuned for updates.`);
+    }
+  };
+
   const productCategories = [
     {
       title: "Communication & Collaboration",
       description: "Connect and collaborate with your team seamlessly",
       color: "from-vytreon-cyan to-vytreon-blue",
       products: [
-        { name: "WhisApp", description: "Your Audio Travel Companion", icon: <MessageSquare size={24} /> },
-        { name: "Chattrer", description: "Advanced chat features", icon: <MessageSquare size={24} /> },
-        { name: "iXhare", description: "Smart content sharing", icon: <Share2 size={24} /> },
+        { name: "WhisApp", description: "Your Audio Travel Companion", icon: <MessageSquare size={24} />, hasUrl: true },
+        { name: "Chattrer", description: "Advanced chat features", icon: <MessageSquare size={24} />, hasUrl: false },
+        { name: "iXhare", description: "Smart content sharing", icon: <Share2 size={24} />, hasUrl: false },
       ]
     },
     {
@@ -20,9 +37,9 @@ const ProductEcosystem = () => {
       description: "Harness the power of artificial intelligence",
       color: "from-vytreon-blue to-vytreon-purple",
       products: [
-        { name: "SireIQ", description: "Business intelligence AI", icon: <Brain size={24} /> },
-        { name: "ComnIQ", description: "Communication AI assistant", icon: <Brain size={24} /> },
-        { name: "SEOAgentPro", description: "AI-powered SEO optimization", icon: <Search size={24} /> },
+        { name: "SireIQ", description: "Business intelligence AI", icon: <Brain size={24} />, hasUrl: false },
+        { name: "ComnIQ", description: "Communication AI assistant", icon: <Brain size={24} />, hasUrl: false },
+        { name: "SEOAgentPro", description: "AI-powered SEO optimization", icon: <Search size={24} />, hasUrl: false },
       ]
     },
     {
@@ -30,12 +47,12 @@ const ProductEcosystem = () => {
       description: "Create, manage, and distribute content",
       color: "from-vytreon-purple to-vytreon-cyan",
       products: [
-        { name: "Voxsaga", description: "Video content platform", icon: <Video size={24} /> },
-        { name: "Auralora", description: "Audio content management", icon: <Headphones size={24} /> },
-        { name: "Didit360", description: "Complete Music & Digital Media Universe", icon: <Music size={24} /> },
-        { name: "Fycera", description: "Create Stunning Videos with AI", icon: <Video size={24} /> },
-        { name: "Fycra", description: "Optimize your YouTube content with AI", icon: <FileText size={24} /> },
-        { name: "NFTchords", description: "Music NFT", icon: <Music size={24} /> },
+        { name: "Voxsaga", description: "Video content platform", icon: <Video size={24} />, hasUrl: false },
+        { name: "Auralora", description: "Audio content management", icon: <Headphones size={24} />, hasUrl: false },
+        { name: "Didit360", description: "Complete Music & Digital Media Universe", icon: <Music size={24} />, hasUrl: true },
+        { name: "Fycera", description: "Create Stunning Videos with AI", icon: <Video size={24} />, hasUrl: false },
+        { name: "Fycra", description: "Optimize your YouTube content with AI", icon: <FileText size={24} />, hasUrl: false },
+        { name: "NFTchords", description: "Music NFT", icon: <Music size={24} />, hasUrl: false },
       ]
     },
     {
@@ -43,17 +60,8 @@ const ProductEcosystem = () => {
       description: "Payments, trading, and travel solutions",
       color: "from-vytreon-cyan to-vytreon-blue",
       products: [
-        { name: "Oowo", description: "Payments solution and trade platform", icon: <CreditCard size={24} /> },
-        { name: "Escazo", description: "All in One travel platform", icon: <Plane size={24} /> },
-      ]
-    },
-    {
-      title: "Data & Analytics",
-      description: "Manage and analyze your business data",
-      color: "from-vytreon-blue to-vytreon-purple",
-      products: [
-        { name: "Analytics Pro", description: "Business intelligence dashboard", icon: <Database size={24} /> },
-        { name: "Data Insights", description: "Advanced data visualization", icon: <Activity size={24} /> },
+        { name: "Oowo", description: "Payments solution and trade platform", icon: <CreditCard size={24} />, hasUrl: true },
+        { name: "Escazo", description: "All in One travel platform", icon: <Plane size={24} />, hasUrl: true },
       ]
     }
   ];
@@ -83,10 +91,17 @@ const ProductEcosystem = () => {
               
               <div className="space-y-4">
                 {category.products.map((product, productIndex) => (
-                  <div key={productIndex} className="flex items-center gap-4 p-4 bg-vytreon-dark-blue/30 rounded-lg hover:bg-vytreon-dark-blue/50 transition-colors">
+                  <div 
+                    key={productIndex} 
+                    className={`flex items-center gap-4 p-4 bg-vytreon-dark-blue/30 rounded-lg hover:bg-vytreon-dark-blue/50 transition-colors ${product.hasUrl ? 'cursor-pointer' : ''}`}
+                    onClick={() => handleProductClick(product.name)}
+                  >
                     <div className="text-vytreon-cyan">{product.icon}</div>
-                    <div>
-                      <h4 className="font-bold text-white">{product.name}</h4>
+                    <div className="flex-1">
+                      <h4 className={`font-bold text-white ${product.hasUrl ? 'hover:text-vytreon-cyan' : ''}`}>
+                        {product.name}
+                        {product.hasUrl && <span className="ml-2 text-xs text-vytreon-cyan">↗</span>}
+                      </h4>
                       <p className="text-gray-400 text-sm">{product.description}</p>
                     </div>
                   </div>

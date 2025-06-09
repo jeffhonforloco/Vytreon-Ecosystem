@@ -1,15 +1,43 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Twitter, Github, Linkedin, Database, Activity, Search, Brain, MessageSquare, Share2, Video, FileText, Headphones, Mail } from 'lucide-react';
 
 const Footer = () => {
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:info@vytreon.com';
+  };
+
+  const handleSocialClick = (platform: string) => {
+    const urls = {
+      twitter: 'https://twitter.com/vytreon',
+      github: 'https://github.com/vytreon',
+      linkedin: 'https://linkedin.com/company/vytreon'
+    };
+    window.open(urls[platform as keyof typeof urls], '_blank');
+  };
+
+  const handleProductClick = (productName: string) => {
+    const productUrls = {
+      'Oowo': 'https://www.oowo.io',
+      'Escazo': 'https://www.escazo.com',
+      'Didit360': 'https://www.didit360.com',
+      'WhisApp': 'https://www.whisapp.com'
+    };
+    
+    const url = productUrls[productName as keyof typeof productUrls];
+    if (url) {
+      window.open(url, '_blank');
+    }
+  };
+
   return (
     <footer className="bg-vytreon-dark-blue/50 border-t border-vytreon-cyan/20 py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-1">
             <img 
-              src="/lovable-uploads/8e349754-a378-4d24-aa39-58005d777cc5.png" 
+              src="/lovable-uploads/b4d5b24d-df73-4dd8-a6a9-2ec42b8d226d.png" 
               alt="Vytreon Logo" 
               className="h-12 w-auto mb-4" 
             />
@@ -17,15 +45,24 @@ const Footer = () => {
               Building the decentralized future through innovation, security, and community governance.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">
+              <button 
+                onClick={() => handleSocialClick('twitter')}
+                className="text-gray-400 hover:text-vytreon-cyan transition-colors"
+              >
                 <Twitter size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">
+              </button>
+              <button 
+                onClick={() => handleSocialClick('github')}
+                className="text-gray-400 hover:text-vytreon-cyan transition-colors"
+              >
                 <Github size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">
+              </button>
+              <button 
+                onClick={() => handleSocialClick('linkedin')}
+                className="text-gray-400 hover:text-vytreon-cyan transition-colors"
+              >
                 <Linkedin size={20} />
-              </a>
+              </button>
             </div>
           </div>
 
@@ -34,15 +71,30 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-center gap-2">
                 <Database size={16} className="text-vytreon-cyan" />
-                <Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Oowo</Link>
+                <button 
+                  onClick={() => handleProductClick('Oowo')}
+                  className="text-gray-400 hover:text-vytreon-cyan transition-colors text-left"
+                >
+                  Oowo
+                </button>
               </li>
               <li className="flex items-center gap-2">
                 <Database size={16} className="text-vytreon-cyan" />
-                <Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Escazo</Link>
+                <button 
+                  onClick={() => handleProductClick('Escazo')}
+                  className="text-gray-400 hover:text-vytreon-cyan transition-colors text-left"
+                >
+                  Escazo
+                </button>
               </li>
               <li className="flex items-center gap-2">
                 <Activity size={16} className="text-vytreon-cyan" />
-                <Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Didit360</Link>
+                <button 
+                  onClick={() => handleProductClick('Didit360')}
+                  className="text-gray-400 hover:text-vytreon-cyan transition-colors text-left"
+                >
+                  Didit360
+                </button>
               </li>
               <li className="flex items-center gap-2">
                 <Search size={16} className="text-vytreon-cyan" />
@@ -54,7 +106,12 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <MessageSquare size={16} className="text-vytreon-cyan" />
-                <Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">WhisApp</Link>
+                <button 
+                  onClick={() => handleProductClick('WhisApp')}
+                  className="text-gray-400 hover:text-vytreon-cyan transition-colors text-left"
+                >
+                  WhisApp
+                </button>
               </li>
               <li className="flex items-center gap-2">
                 <Share2 size={16} className="text-vytreon-cyan" />
@@ -90,22 +147,22 @@ const Footer = () => {
           <div className="col-span-1">
             <h3 className="text-white font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
-              <li><Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Documentation</Link></li>
-              <li><Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">API Reference</Link></li>
-              <li><Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Community</Link></li>
-              <li><Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Security</Link></li>
-              <li><Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Blog</Link></li>
+              <li><Link to="/docs" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Documentation</Link></li>
+              <li><Link to="/api" className="text-gray-400 hover:text-vytreon-cyan transition-colors">API Reference</Link></li>
+              <li><Link to="/community" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Community</Link></li>
+              <li><Link to="/security" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Security</Link></li>
+              <li><Link to="/blog" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Blog</Link></li>
             </ul>
           </div>
 
           <div className="col-span-1">
             <h3 className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">About</Link></li>
-              <li><Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Careers</Link></li>
-              <li><Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Partners</Link></li>
-              <li><Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Contact</Link></li>
-              <li><Link to="#" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Press</Link></li>
+              <li><Link to="/about" className="text-gray-400 hover:text-vytreon-cyan transition-colors">About</Link></li>
+              <li><Link to="/careers" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Careers</Link></li>
+              <li><Link to="/partners" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Partners</Link></li>
+              <li><Link to="/contact" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Contact</Link></li>
+              <li><Link to="/press" className="text-gray-400 hover:text-vytreon-cyan transition-colors">Press</Link></li>
             </ul>
           </div>
         </div>
@@ -114,19 +171,19 @@ const Footer = () => {
           <div className="flex items-center space-x-4">
             <p className="text-gray-500 mb-4 md:mb-0 flex items-center gap-2">
               <Mail size={16} className="text-vytreon-cyan" />
-              <a 
-                href="mailto:info@vytreon.com" 
+              <button 
+                onClick={handleEmailClick}
                 className="hover:text-vytreon-cyan transition-colors"
               >
                 info@vytreon.com
-              </a>
+              </button>
             </p>
             <p className="text-gray-500 mb-4 md:mb-0">&copy; {new Date().getFullYear()} Vytreon Group. All rights reserved.</p>
           </div>
           <div className="flex space-x-6">
-            <Link to="#" className="text-gray-500 hover:text-vytreon-cyan transition-colors">Privacy Policy</Link>
-            <Link to="#" className="text-gray-500 hover:text-vytreon-cyan transition-colors">Terms of Service</Link>
-            <Link to="#" className="text-gray-500 hover:text-vytreon-cyan transition-colors">Cookie Policy</Link>
+            <Link to="/privacy" className="text-gray-500 hover:text-vytreon-cyan transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="text-gray-500 hover:text-vytreon-cyan transition-colors">Terms of Service</Link>
+            <Link to="/cookies" className="text-gray-500 hover:text-vytreon-cyan transition-colors">Cookie Policy</Link>
           </div>
         </div>
       </div>

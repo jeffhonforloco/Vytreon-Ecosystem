@@ -33,7 +33,7 @@ const AboutVytreon = () => {
             
             <div className="relative">
               <img 
-                src="/lovable-uploads/20074475-c6f9-44c7-bcea-f548fa112e57.png" 
+                src="/lovable-uploads/b4d5b24d-df73-4dd8-a6a9-2ec42b8d226d.png" 
                 alt="Vytreon Ecosystem" 
                 className="w-full max-w-md mx-auto animate-float"
               />
