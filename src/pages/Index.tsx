@@ -2,16 +2,15 @@
 import React, { useEffect } from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import LandingHero from '@/components/landing/LandingHero';
-import AboutSection from '@/components/landing/AboutSection';
-import ProductShowcase from '@/components/landing/ProductShowcase';
-import IntegrationSection from '@/components/landing/IntegrationSection';
-import ForEnterprise from '@/components/landing/ForEnterprise';
-import CallToAction from '@/components/landing/CallToAction';
+import HeroSection from '@/components/sections/HeroSection';
+import VisionSection from '@/components/sections/VisionSection';
+import EcosystemSection from '@/components/sections/EcosystemSection';
+import GovernanceSection from '@/components/sections/GovernanceSection';
+import CallToAction from '@/components/sections/CallToAction';
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Vytreon | Connected Digital Ecosystem";
+    document.title = "Vytreon | Transforming Digital Ecosystems";
   }, []);
 
   return (
@@ -19,11 +18,10 @@ const Index = () => {
       <Navbar />
       
       <main className="flex-grow">
-        <LandingHero />
-        <AboutSection />
-        <ProductShowcase />
-        <IntegrationSection />
-        <ForEnterprise />
+        <HeroSection />
+        <VisionSection />
+        <EcosystemSection />
+        <GovernanceSection />
         <CallToAction />
       </main>
       

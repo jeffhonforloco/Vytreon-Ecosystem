@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Fingerprint, Users, Globe, Lock, Zap } from 'lucide-react';
