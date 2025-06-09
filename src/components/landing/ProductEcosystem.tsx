@@ -10,7 +10,7 @@ const ProductEcosystem = () => {
       description: "Connect and collaborate with your team seamlessly",
       color: "from-vytreon-cyan to-vytreon-blue",
       products: [
-        { name: "WhisApp", description: "Secure messaging for teams", icon: <MessageSquare size={24} /> },
+        { name: "WhisApp", description: "Your Audio Travel Companion", icon: <MessageSquare size={24} /> },
         { name: "Chattrer", description: "Advanced chat features", icon: <MessageSquare size={24} /> },
         { name: "iXhare", description: "Smart content sharing", icon: <Share2 size={24} /> },
       ]
@@ -33,8 +33,9 @@ const ProductEcosystem = () => {
         { name: "Voxsaga", description: "Video content platform", icon: <Video size={24} /> },
         { name: "Auralora", description: "Audio content management", icon: <Headphones size={24} /> },
         { name: "Didit360", description: "Complete Music & Digital Media Universe", icon: <Music size={24} /> },
-        { name: "Fycera", description: "Document management", icon: <FileText size={24} /> },
-        { name: "Fycra", description: "Advanced documentation", icon: <FileText size={24} /> },
+        { name: "Fycera", description: "Create Stunning Videos with AI", icon: <Video size={24} /> },
+        { name: "Fycra", description: "Optimize your YouTube content with AI", icon: <FileText size={24} /> },
+        { name: "NFTchords", description: "Music NFT", icon: <Music size={24} /> },
       ]
     },
     {
