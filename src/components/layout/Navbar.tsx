@@ -13,16 +13,14 @@ const Navbar = () => {
   };
 
   const scrollToSection = (sectionId: string) => {
-    setMobileMenuOpen(false); // Close mobile menu when clicking an item
+    setMobileMenuOpen(false);
     
-    // Find the element to scroll to
     const element = document.getElementById(sectionId);
     if (element) {
-      // Adding a small delay to ensure UI updates before scrolling
       setTimeout(() => {
         const offsetTop = element.getBoundingClientRect().top + window.pageYOffset;
         window.scrollTo({
-          top: offsetTop - 80, // Offset for the navbar height
+          top: offsetTop - 80,
           behavior: 'smooth'
         });
       }, 100);
@@ -30,37 +28,37 @@ const Navbar = () => {
   };
 
   const menuItems = [
-    { id: 'hero', label: 'Home' },
-    { id: 'vision', label: 'Vision' },
-    { id: 'ecosystem', label: 'Ecosystem' },
-    { id: 'governance', label: 'Governance' },
+    { id: 'about', label: 'About' },
+    { id: 'products', label: 'Products' },
+    { id: 'how-it-works', label: 'How it Works' },
+    { id: 'contact', label: 'Contact' },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-vytreon-dark/80 border-b border-vytreon-cyan/20">
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-vytreon-dark/90 border-b border-vytreon-cyan/20">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-3">
           <img 
             src="/lovable-uploads/8e349754-a378-4d24-aa39-58005d777cc5.png" 
             alt="Vytreon Logo" 
             className="h-10 w-auto" 
           />
-          <span className="font-heading text-xl font-extrabold text-white">Vytreon</span>
+          <span className="font-heading text-2xl font-extrabold text-white">Vytreon</span>
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-8">
           {menuItems.map((item) => (
             <button 
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className="text-white hover:text-vytreon-cyan transition-colors cursor-pointer font-semibold"
+              className="text-white hover:text-vytreon-cyan transition-colors cursor-pointer font-semibold text-lg"
             >
               {item.label}
             </button>
           ))}
-          <Button className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white font-bold">
-            Connect
+          <Button className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white font-bold px-6 py-2">
+            Start Free Trial
           </Button>
         </div>
 
@@ -81,13 +79,13 @@ const Navbar = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-white hover:text-vytreon-cyan px-2 py-2 transition-colors cursor-pointer font-semibold"
+                className="text-white hover:text-vytreon-cyan px-2 py-2 transition-colors cursor-pointer font-semibold text-left"
               >
                 {item.label}
               </button>
             ))}
             <Button className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white w-full font-bold">
-              Connect
+              Start Free Trial
             </Button>
           </div>
         </div>

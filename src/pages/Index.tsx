@@ -2,15 +2,18 @@
 import React, { useEffect } from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import HeroSection from '@/components/sections/HeroSection';
-import VisionSection from '@/components/sections/VisionSection';
-import EcosystemSection from '@/components/sections/EcosystemSection';
-import GovernanceSection from '@/components/sections/GovernanceSection';
-import CallToAction from '@/components/sections/CallToAction';
+import LandingHero from '@/components/landing/LandingHero';
+import AboutVytreon from '@/components/landing/AboutVytreon';
+import ProductEcosystem from '@/components/landing/ProductEcosystem';
+import HowItWorks from '@/components/landing/HowItWorks';
+import ForBusinesses from '@/components/landing/ForBusinesses';
+import TechnologyStack from '@/components/landing/TechnologyStack';
+import CommunitySection from '@/components/landing/CommunitySection';
+import FinalCTA from '@/components/landing/FinalCTA';
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Vytreon | Transforming Digital Ecosystems";
+    document.title = "Vytreon | Complete Digital Ecosystem";
   }, []);
 
   return (
@@ -18,11 +21,14 @@ const Index = () => {
       <Navbar />
       
       <main className="flex-grow">
-        <HeroSection />
-        <VisionSection />
-        <EcosystemSection />
-        <GovernanceSection />
-        <CallToAction />
+        <LandingHero />
+        <AboutVytreon />
+        <ProductEcosystem />
+        <HowItWorks />
+        <ForBusinesses />
+        <TechnologyStack />
+        <CommunitySection />
+        <FinalCTA />
       </main>
       
       <Footer />
