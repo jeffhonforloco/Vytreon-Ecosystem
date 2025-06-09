@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { 
   Home, 
@@ -126,7 +125,7 @@ const Sidebar = ({ activeModule, setActiveModule }: SidebarProps) => {
       <div className="p-6">
         <div className="flex items-center space-x-3">
           <img 
-            src="/lovable-uploads/e4968298-7baf-4630-b38d-3a8b8bc28b42.png" 
+            src="/lovable-uploads/9f4fc31e-da9e-48a9-942d-5df7c9e41858.png" 
             alt="Vytreon Logo" 
             className="w-10 h-10"
           />

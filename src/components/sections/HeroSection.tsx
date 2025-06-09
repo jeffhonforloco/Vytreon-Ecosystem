@@ -77,7 +77,7 @@ const HeroSection = () => {
           <div className="w-full lg:w-1/2 relative">
             <div className="relative animate-float">
               <img 
-                src="/lovable-uploads/20074475-c6f9-44c7-bcea-f548fa112e57.png" 
+                src="/lovable-uploads/9f4fc31e-da9e-48a9-942d-5df7c9e41858.png" 
                 alt="Vytreon Logo" 
                 className="w-full max-w-md mx-auto animate-pulse-glow"
               />
