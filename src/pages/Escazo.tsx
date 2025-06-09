@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Plane, MapPin, Calendar, Users, Star, CreditCard, Globe, Clock } from "lucide-react";
+import { Plane, MapPin, Calendar, Users, Star, CreditCard, Globe, Clock, Plus } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Sidebar from "@/components/layout/Sidebar";

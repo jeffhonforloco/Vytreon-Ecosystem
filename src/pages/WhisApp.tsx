@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { MessageSquare, ThumbsUp, Users, BarChart3, Clock, TrendingUp, AlertCircle, CheckCircle } from "lucide-react";
+import { MessageSquare, ThumbsUp, Users, BarChart3, Clock, TrendingUp, AlertCircle, CheckCircle, Star } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Sidebar from "@/components/layout/Sidebar";
