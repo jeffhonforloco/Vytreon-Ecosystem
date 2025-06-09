@@ -41,7 +41,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <img 
-            src="/lovable-uploads/9f4fc31e-da9e-48a9-942d-5df7c9e41858.png" 
+            src="/lovable-uploads/8e349754-a378-4d24-aa39-58005d777cc5.png" 
             alt="Vytreon Logo" 
             className="h-10 w-auto" 
           />

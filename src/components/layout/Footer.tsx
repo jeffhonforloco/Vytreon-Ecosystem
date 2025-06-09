@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-1">
             <img 
-              src="/lovable-uploads/9f4fc31e-da9e-48a9-942d-5df7c9e41858.png" 
+              src="/lovable-uploads/8e349754-a378-4d24-aa39-58005d777cc5.png" 
               alt="Vytreon Logo" 
               className="h-12 w-auto mb-4" 
             />
