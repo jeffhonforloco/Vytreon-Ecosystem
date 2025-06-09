@@ -38,7 +38,7 @@ const ProductEcosystem = () => {
       color: "from-vytreon-blue to-vytreon-purple",
       products: [
         { name: "SireIQ", description: "Business intelligence AI", icon: <Brain size={24} />, hasUrl: false },
-        { name: "ComnIQ", description: "Communication AI assistant", icon: <Brain size={24} />, hasUrl: false },
+        { name: "CumnIQ", description: "Communication AI assistant", icon: <Brain size={24} />, hasUrl: false },
         { name: "SEOAgentPro", description: "AI-powered SEO optimization", icon: <Search size={24} />, hasUrl: false },
       ]
     },

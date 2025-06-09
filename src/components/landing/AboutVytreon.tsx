@@ -10,8 +10,8 @@ const AboutVytreon = () => {
           <div className="text-center mb-16">
             <h2 className="section-heading">Building the Future of Digital Interaction</h2>
             <p className="text-gray-300 text-xl max-w-3xl mx-auto">
-              Just as Meta connects people through Facebook, Instagram, and WhatsApp, 
-              Vytreon connects your entire digital workflow through our integrated ecosystem.
+              Vytreon revolutionizes how you work by connecting your entire digital workflow 
+              through our integrated ecosystem of powerful applications and tools.
             </p>
           </div>
 
