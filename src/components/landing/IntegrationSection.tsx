@@ -1,24 +1,56 @@
 
 import React from 'react';
 import { Card } from '@/components/ui/card';
-import { ArrowRight, Database, Sync, Users } from 'lucide-react';
+import { ArrowRight, Database, RefreshCw, Users, Zap } from 'lucide-react';
 
 const IntegrationSection = () => {
   const integrationFeatures = [
     {
       icon: <Database size={32} className="text-vytreon-cyan" />,
-      title: "Shared Data",
-      description: "Your profile, preferences, and history work across all Vytreon products. Set it once, use it everywhere."
+      title: "Unified Data",
+      description: "Your profile, preferences, and history sync across all Vytreon products. Set up once, use everywhere."
     },
     {
-      icon: <Sync size={32} className="text-vytreon-blue" />,
-      title: "Seamless Sync",
-      description: "Switch between apps without losing context. Your work flows with you from payments to content creation."
+      icon: <RefreshCw size={32} className="text-vytreon-blue" />,
+      title: "Seamless Flow",
+      description: "Switch between apps without losing context. Your work and data flow seamlessly from one product to another."
     },
     {
       icon: <Users size={32} className="text-vytreon-purple" />,
       title: "Connected Communities",
       description: "Your connections and content span across platforms, creating richer experiences and deeper relationships."
+    },
+    {
+      icon: <Zap size={32} className="text-vytreon-cyan" />,
+      title: "Smart Automation",
+      description: "AI-powered features that learn from your usage across all products to provide personalized experiences."
+    }
+  ];
+
+  const integrationExamples = [
+    {
+      from: "Oowo",
+      to: "Escazo",
+      description: "Use your Oowo wallet directly for travel bookings",
+      icon: "💳 ✈️"
+    },
+    {
+      from: "Didit360",
+      to: "SireIQ",
+      description: "Analyze your content performance with business insights",
+      icon: "📹 📊"
+    },
+    {
+      from: "WhisApp",
+      to: "SEOAgentPro",
+      description: "Customer feedback automatically improves your SEO strategy",
+      icon: "💬 🔍"
+    },
+    {
+      from: "Fycera",
+      to: "Fycra",
+      description: "Content created in Fycera optimizes seamlessly with Fycra",
+      icon: "🎬 📈"
     }
   ];
 
@@ -27,53 +59,58 @@ const IntegrationSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-4xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Better Together
+            The Power of Integration
           </h2>
-          <p className="text-gray-300 text-lg">
-            Just like how you can share content from Instagram to Facebook, or use WhatsApp 
-            Business with Facebook ads, Vytreon products share data and features to make 
-            your digital life simpler and more powerful.
+          <p className="text-gray-300 text-lg leading-relaxed">
+            Just like how you can share an Instagram post to Facebook, or use WhatsApp Business with Facebook ads, 
+            Vytreon products are designed to work together, creating a seamless digital ecosystem that's greater than the sum of its parts.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {integrationFeatures.map((feature, index) => (
-            <Card key={index} className="glass-card p-8 text-center">
+            <Card key={index} className="glass-card p-6 text-center">
               <div className="mb-6 flex justify-center">{feature.icon}</div>
-              <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-              <p className="text-gray-400">{feature.description}</p>
+              <h3 className="text-lg font-bold text-white mb-3">{feature.title}</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
             </Card>
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-vytreon-cyan/10 to-vytreon-blue/10 border border-vytreon-cyan/20 rounded-xl p-8">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-4">Real Integration Examples</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center gap-3">
-                  <ArrowRight size={16} className="text-vytreon-cyan" />
-                  Use Oowo payments directly in Escazo for seamless travel booking
-                </li>
-                <li className="flex items-center gap-3">
-                  <ArrowRight size={16} className="text-vytreon-cyan" />
-                  Share content from Didit360 to your business analytics in SireIQ
-                </li>
-                <li className="flex items-center gap-3">
-                  <ArrowRight size={16} className="text-vytreon-cyan" />
-                  Customer feedback from WhisApp automatically updates your SEO strategy
-                </li>
-                <li className="flex items-center gap-3">
-                  <ArrowRight size={16} className="text-vytreon-cyan" />
-                  Content created in Fycera works seamlessly with Fycra for YouTube optimization
-                </li>
-              </ul>
+        <div className="bg-gradient-to-r from-vytreon-cyan/10 to-vytreon-blue/10 border border-vytreon-cyan/20 rounded-xl p-8 mb-16">
+          <h3 className="text-2xl font-bold text-white mb-8 text-center">Real Integration Examples</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {integrationExamples.map((example, index) => (
+              <div key={index} className="flex items-center gap-4 p-4 bg-vytreon-dark-blue/30 rounded-lg">
+                <div className="text-2xl">{example.icon}</div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-vytreon-cyan font-bold text-sm">{example.from}</span>
+                    <ArrowRight size={14} className="text-gray-400" />
+                    <span className="text-vytreon-blue font-bold text-sm">{example.to}</span>
+                  </div>
+                  <p className="text-gray-300 text-sm">{example.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="text-center">
+          <div className="inline-flex items-center gap-8 bg-vytreon-dark-blue/50 border border-vytreon-cyan/20 rounded-xl p-6">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white mb-1">15+</div>
+              <p className="text-gray-400 text-sm">Connected Products</p>
             </div>
-            <div className="text-center lg:text-right">
-              <div className="text-4xl font-bold text-white mb-2">15+</div>
-              <p className="text-gray-400">Connected Products</p>
-              <div className="text-4xl font-bold text-white mb-2 mt-4">1</div>
-              <p className="text-gray-400">Unified Experience</p>
+            <div className="w-px h-12 bg-vytreon-cyan/20"></div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white mb-1">1</div>
+              <p className="text-gray-400 text-sm">Unified Account</p>
+            </div>
+            <div className="w-px h-12 bg-vytreon-cyan/20"></div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white mb-1">∞</div>
+              <p className="text-gray-400 text-sm">Possibilities</p>
             </div>
           </div>
         </div>
