@@ -24,12 +24,12 @@ const LandingHero = () => {
           </h1>
           
           <p className="text-gray-300 text-xl md:text-2xl mb-12 max-w-2xl mx-auto">
-            One ecosystem. Multiple solutions.
+            Connecting digital experiences across payments, travel, content, and business solutions
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white font-bold px-8 py-6 rounded-lg flex items-center gap-2 group text-lg">
-              Explore Products
+              Explore Our Ecosystem
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
