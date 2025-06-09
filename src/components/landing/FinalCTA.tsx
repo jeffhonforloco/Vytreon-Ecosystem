@@ -25,7 +25,7 @@ const FinalCTA = () => {
   };
 
   const handleContactEmail = () => {
-    window.location.href = 'mailto:contact@vytreon.com';
+    window.location.href = 'mailto:info@vytreon.com';
   };
 
   return (
@@ -55,7 +55,7 @@ const FinalCTA = () => {
               onClick={handleGetNotified}
               className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white font-bold px-8 py-6 text-lg rounded-lg flex items-center gap-3 group"
             >
-              Get Notified at Launch
+              Get Notified
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 
@@ -132,7 +132,7 @@ const FinalCTA = () => {
                 onClick={handleContactEmail}
                 className="text-vytreon-cyan hover:text-white transition-colors font-semibold"
               >
-                contact@vytreon.com
+                info@vytreon.com
               </button>
             </div>
           </div>

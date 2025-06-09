@@ -4,7 +4,7 @@ import { Twitter, Github, Linkedin, Database, Activity, Search, Brain, MessageSq
 
 const Footer = () => {
   const handleEmailClick = () => {
-    window.location.href = 'mailto:contact@vytreon.com';
+    window.location.href = 'mailto:info@vytreon.com';
   };
 
   const handleSocialClick = (platform: string) => {
@@ -204,7 +204,7 @@ const Footer = () => {
                 onClick={handleEmailClick}
                 className="hover:text-vytreon-cyan transition-colors"
               >
-                contact@vytreon.com
+                info@vytreon.com
               </button>
             </p>
             <p className="text-gray-500 mb-4 md:mb-0">&copy; {new Date().getFullYear()} Vytreon Group. All rights reserved.</p>

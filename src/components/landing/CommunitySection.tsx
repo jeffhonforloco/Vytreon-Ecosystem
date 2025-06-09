@@ -2,17 +2,10 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Users, MessageCircle, BookOpen, Award, ExternalLink } from 'lucide-react';
+import { BookOpen, MessageCircle, ExternalLink } from 'lucide-react';
 
 const CommunitySection = () => {
   const [email, setEmail] = useState('');
-
-  const communityStats = [
-    { icon: <Users size={24} />, number: "50K+", label: "Active Users" },
-    { icon: <MessageCircle size={24} />, number: "10K+", label: "Community Members" },
-    { icon: <BookOpen size={24} />, number: "500+", label: "Tutorials & Guides" },
-    { icon: <Award size={24} />, number: "98%", label: "Satisfaction Rate" }
-  ];
 
   const resources = [
     {
@@ -57,18 +50,6 @@ const CommunitySection = () => {
             Connect with developers, entrepreneurs, and businesses who are building 
             the future with Vytreon's integrated ecosystem.
           </p>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          {communityStats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="h-16 w-16 rounded-full bg-vytreon-cyan/10 flex items-center justify-center mx-auto mb-4 text-vytreon-cyan">
-                {stat.icon}
-              </div>
-              <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
-              <p className="text-gray-400">{stat.label}</p>
-            </div>
-          ))}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
