@@ -1,73 +1,65 @@
-# Welcome to your Lovable project
-
-## Project info
-
-**URL**: https://lovable.dev/projects/87767dca-e806-49c3-8d0a-245025daff1b
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/87767dca-e806-49c3-8d0a-245025daff1b) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/87767dca-e806-49c3-8d0a-245025daff1b) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Vytreon Group, LLC – The Future of Innovation
+Vytreon Group is a technology and innovation powerhouse, building products that shape the next generation of digital and physical experiences.
+We focus on AI, energy, mobility, communication, entertainment, and financial technology, with SireIQ as our flagship platform.
+🚀 Flagship Product
+SireIQ – The All-in-One AI Creative Hub
+A seamless platform for:
+🎨 Image Generation
+🎬 Video Creation
+🎵 Music Production
+🤝 AI-Powered Collaboration
+SireIQ empowers creators, businesses, and developers to create effortlessly with intuitive AI tools.
+🌐 Vytreon Ecosystem
+Technology & AI
+Fycra – AI-powered YouTube content creation (thumbnails, FaceSwap, titles).
+Fycera – Advanced video creation & Nvidia-level AI processing.
+CaptionIQ – AI-driven social media caption generator & analytics.
+CumnIQ – IQ-focused social platform with gamification & AI recommendations.
+Energy & Mobility
+Vytreon NanoCharge – Wireless short-range energy transfer.
+Vytreon PowerCell X1 – Graphene-based modular battery system.
+Communication
+WhisApp – Encrypted chat + audio journaling platform.
+Chattrer – Privacy-focused messaging alternative.
+Digital & Financial Solutions
+Oowo – AI-enhanced global payment & trade system.
+Travel & Lifestyle
+Escazo – AI-powered travel companion (flights, hotels, insights).
+Urs79 – AI-enhanced matchmaking & dating platform.
+Entertainment & Media
+Didit360 – Music streaming & MusicNFT platform.
+Auralora – Audiobook & AI narration platform.
+VoxSaga – AI-powered podcast creation & monetization.
+🌍 Vision
+Vytreon Group is more than a company — it’s an ecosystem.
+We aim to:
+Expand R&D in energy and mobility.
+Integrate AI-powered tools across all platforms.
+Partner with global manufacturers to scale.
+Build sustainable, secure, and innovative solutions.
+📂 Repository Structure
+/vytreon
+  ├── sireiq/         # Flagship platform
+  ├── captioniq/      # AI-driven captions
+  ├── cumniq/         # IQ-based social platform
+  ├── escazo/         # Travel app
+  ├── didit360/       # Music streaming
+  ├── docs/           # Shared documentation
+  └── README.md       # This file
+🛠️ Tech Stack
+Frontend: React, Next.js, TailwindCSS
+Backend: Node.js, Express, Supabase / Firebase / AWS (per project)
+AI/ML: OpenAI, Hugging Face, NVIDIA APIs
+DevOps: GitHub Actions, Cloudflare, Vercel
+🤝 Contributing
+We welcome contributions to Vytreon’s ecosystem.
+Fork the repo
+Create a new branch (feature/your-feature)
+Commit your changes
+Submit a pull request
+📬 Contact
+🌐 Website: vytreon.com
+💡 Flagship: sireiq.com
+📧 Email: info@vytreon.com
+🔗 LinkedIn: Vytreon Group
+© 2025 Vytreon Group, LLC. All rights reserved.
