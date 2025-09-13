@@ -1,19 +1,14 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles, Mail } from 'lucide-react';
-
 const FinalCTA = () => {
   const [email, setEmail] = useState('');
-
   const handleGetNotified = () => {
     window.open('https://vytreon.com/notify', '_blank');
   };
-
   const handleScheduleDemo = () => {
     window.open('https://calendly.com/vytreon/demo', '_blank');
   };
-
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
@@ -23,13 +18,10 @@ const FinalCTA = () => {
       alert('Thank you for subscribing to our newsletter!');
     }
   };
-
   const handleContactEmail = () => {
     window.location.href = 'mailto:info@vytreon.com';
   };
-
-  return (
-    <section id="contact" className="py-24 relative overflow-hidden">
+  return <section id="contact" className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-radial from-vytreon-cyan/10 to-transparent"></div>
       <div className="absolute inset-0 hex-grid opacity-30"></div>
       
@@ -51,20 +43,11 @@ const FinalCTA = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button 
-              onClick={handleGetNotified}
-              className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white font-bold px-8 py-6 text-lg rounded-lg flex items-center gap-3 group"
-            >
+            <Button onClick={handleGetNotified} className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white font-bold px-8 py-6 text-lg rounded-lg flex items-center gap-3 group">
               Get Notified
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button 
-              onClick={handleScheduleDemo}
-              variant="outline" 
-              className="border-2 border-vytreon-cyan text-white hover:bg-vytreon-cyan/10 px-8 py-6 text-lg rounded-lg font-bold"
-            >
-              Schedule Demo
-            </Button>
+            
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
@@ -108,18 +91,8 @@ const FinalCTA = () => {
             </p>
             
             <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mb-6">
-              <input 
-                type="email" 
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email" 
-                className="flex-1 px-4 py-3 bg-vytreon-dark border border-vytreon-cyan/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-vytreon-cyan"
-                required
-              />
-              <Button 
-                type="submit"
-                className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white font-bold px-6 py-3 rounded-lg"
-              >
+              <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Enter your email" className="flex-1 px-4 py-3 bg-vytreon-dark border border-vytreon-cyan/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-vytreon-cyan" required />
+              <Button type="submit" className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white font-bold px-6 py-3 rounded-lg">
                 Subscribe
               </Button>
             </form>
@@ -128,18 +101,13 @@ const FinalCTA = () => {
             <div className="flex items-center justify-center gap-2 mt-4">
               <Mail size={16} className="text-vytreon-cyan" />
               <span className="text-gray-300">Contact us: </span>
-              <button 
-                onClick={handleContactEmail}
-                className="text-vytreon-cyan hover:text-white transition-colors font-semibold"
-              >
+              <button onClick={handleContactEmail} className="text-vytreon-cyan hover:text-white transition-colors font-semibold">
                 info@vytreon.com
               </button>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default FinalCTA;
