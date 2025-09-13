@@ -49,9 +49,8 @@ const SireIQFlagship = () => {
             </h2>
             
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              The all-in-one AI creative platform that empowers teams to generate images, 
-              videos, music, and collaborate seamlessly. Transform your creative workflow 
-              with cutting-edge artificial intelligence.
+              AI-powered creative platform - Smarter AI Assistant for chat, content & Workflows. 
+              All-in-one AI assistant for chatting, coding, content creation, research and workflow automation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">

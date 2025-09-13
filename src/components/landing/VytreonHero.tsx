@@ -30,7 +30,7 @@ const VytreonHero = () => {
           {/* Company badge */}
           <div className="inline-flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2 mb-8 shadow-sm">
             <Sparkles size={16} className="text-accent" />
-            <span className="text-sm font-medium text-muted-foreground">Vytreon Group, LLC</span>
+            <span className="text-sm font-medium text-muted-foreground">Vytreon</span>
           </div>
           
           {/* Main headline */}
