@@ -63,8 +63,8 @@ const EcosystemGrid = () => {
         },
         { 
           name: "Voxsaga", 
-          description: "Video content platform", 
-          icon: <Video size={20} />, 
+          description: "Podcast hosting platform", 
+          icon: <Headphones size={20} />, 
           url: "https://voxsaga.com" 
         },
         { 
@@ -117,7 +117,7 @@ const EcosystemGrid = () => {
   };
 
   return (
-    <section id="ecosystem" className="py-24">
+    <section id="products" className="py-24">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">

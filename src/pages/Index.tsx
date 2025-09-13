@@ -6,6 +6,7 @@ import VytreonHero from '@/components/landing/VytreonHero';
 import SireIQFlagship from '@/components/landing/SireIQFlagship';
 import EcosystemGrid from '@/components/landing/EcosystemGrid';
 import VisionStatement from '@/components/landing/VisionStatement';
+import HowItWorks from '@/components/landing/HowItWorks';
 import FinalCTA from '@/components/landing/FinalCTA';
 
 const Index = () => {
@@ -22,6 +23,7 @@ const Index = () => {
         <SireIQFlagship />
         <EcosystemGrid />
         <VisionStatement />
+        <HowItWorks />
         <FinalCTA />
       </main>
       
