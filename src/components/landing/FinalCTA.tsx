@@ -71,12 +71,10 @@ const FinalCTA = () => {
               We can't wait to see this vision come to life."
             </h3>
             <div className="flex items-center justify-center gap-3">
-              <div className="h-10 w-10 bg-vytreon-cyan/20 rounded-full flex items-center justify-center">
-                <span className="text-vytreon-cyan font-bold">AM</span>
-              </div>
+              
               <div className="text-left">
-                <p className="text-white font-semibold">Alex Morgan</p>
-                <p className="text-gray-400 text-sm">CTO, Innovation Labs</p>
+                
+                
               </div>
             </div>
           </div>
