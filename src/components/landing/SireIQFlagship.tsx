@@ -23,49 +23,53 @@ const SireIQFlagship = () => {
     title: "Team Collaboration",
     description: "Work together on creative projects"
   }];
-  return <section id="sireiq" className="space-section bg-gradient-surface">
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+  return <section id="sireiq" className="space-section bg-gradient-surface relative overflow-hidden">
+      {/* Luxury background elements */}
+      <div className="absolute top-0 left-0 w-144 h-144 bg-accent/5 rounded-full blur-5xl"></div>
+      <div className="absolute bottom-0 right-0 w-128 h-128 bg-accent-secondary/5 rounded-full blur-4xl"></div>
+      
+      <div className="container mx-auto px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-24 items-center">
           {/* Left content */}
-          <div className="animate-slide-up">
-            <div className="inline-flex items-center gap-3 glass-card-premium rounded-full px-5 py-2 mb-8">
-              <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
-              <Zap size={16} className="text-accent" />
-              <span className="text-sm font-semibold text-accent tracking-wide">Flagship Product</span>
+          <div className="animate-slide-up-luxury">
+            <div className="inline-flex items-center gap-4 glass-card-premium rounded-full px-6 py-3 mb-12 shadow-luxury">
+              <div className="w-3 h-3 rounded-full bg-gradient-hero animate-pulse-luxury"></div>
+              <Zap size={18} className="text-accent animate-shimmer-luxury" />
+              <span className="text-sm font-semibold text-accent tracking-widest uppercase">Flagship Product</span>
             </div>
             
-            <h2 className="text-h1 font-heading font-bold tracking-tight mb-8">
-              <span className="text-gradient block mb-2">SireIQ</span>
-              <span className="text-muted-foreground">Creative Platform</span>
+            <h2 className="text-h1 font-heading font-bold tracking-tight mb-12">
+              <span className="text-gradient block mb-4">SireIQ</span>
+              <span className="text-muted-foreground font-light">Creative Platform</span>
             </h2>
             
-            <p className="text-body-lg text-muted-foreground mb-10 leading-relaxed">
+            <p className="text-body-xl text-muted-foreground mb-12 leading-relaxed font-light">
               AI-powered creative platform - Smarter AI Assistant for chat, content & Workflows. 
               All-in-one AI assistant for chatting, coding, content creation, research and workflow automation.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 mb-16">
+            <div className="flex flex-col sm:flex-row gap-8 mb-20">
               <Button 
                 size="lg" 
                 onClick={handleTrySireIQ} 
-                className="btn-premium text-lg px-10 py-6 h-auto group rounded-xl font-semibold shadow-premium"
+                className="btn-premium text-lg px-12 py-8 h-auto group rounded-2xl font-semibold shadow-luxury text-white hover-lift-strong"
               >
                 Try SireIQ Free
-                <ExternalLink size={20} className="ml-2 group-hover:scale-110 transition-transform duration-300" />
+                <ExternalLink size={22} className="ml-3 group-hover:scale-110 transition-transform duration-500" />
               </Button>
             </div>
             
-            {/* Feature grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {/* Luxury feature grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {features.map((feature, index) => 
-                <div key={index} className="glass-card p-4 rounded-xl group hover:scale-105 transition-all duration-300">
-                  <div className="flex items-start gap-4">
-                    <div className="text-accent mt-1 group-hover:scale-110 transition-transform duration-300">
+                <div key={index} className="glass-card-premium p-6 rounded-2xl group hover-lift transition-all duration-500 shadow-luxury">
+                  <div className="flex items-start gap-5">
+                    <div className="text-accent mt-1 group-hover:scale-110 transition-transform duration-500 p-3 bg-accent/10 rounded-xl">
                       {feature.icon}
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2">{feature.title}</h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
+                      <h4 className="font-semibold text-foreground mb-3 text-lg font-heading">{feature.title}</h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed font-light">{feature.description}</p>
                     </div>
                   </div>
                 </div>
@@ -74,29 +78,29 @@ const SireIQFlagship = () => {
           </div>
           
           {/* Right visual */}
-          <div className="relative animate-slide-up delay-200">
-            <div className="glass-card-premium p-10 rounded-3xl shadow-premium">
-              <div className="aspect-video bg-gradient-to-br from-accent/10 via-blue-500/10 to-purple-500/10 rounded-2xl flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-mesh-gradient opacity-30"></div>
+          <div className="relative animate-slide-up-luxury delay-200">
+            <div className="glass-card-premium p-12 rounded-3xl shadow-luxury relative overflow-hidden">
+              <div className="aspect-video bg-gradient-to-br from-accent/10 via-accent-secondary/10 to-accent-tertiary/10 rounded-2xl flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-mesh-gradient opacity-40"></div>
                 <div className="text-center z-10">
-                  <div className="w-32 h-32 bg-gradient-primary rounded-full flex items-center justify-center mb-6 mx-auto shadow-premium animate-glow-pulse">
-                    <Zap size={40} className="text-white" />
+                  <div className="w-40 h-40 bg-gradient-hero rounded-full flex items-center justify-center mb-8 mx-auto shadow-luxury animate-pulse-luxury hover-glow">
+                    <Zap size={48} className="text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-3">SireIQ Platform</h3>
-                  <p className="text-muted-foreground">Experience the future of AI creativity</p>
+                  <h3 className="text-3xl font-bold text-foreground mb-4 font-heading">SireIQ Platform</h3>
+                  <p className="text-muted-foreground text-lg font-light">Experience the future of AI creativity</p>
                 </div>
                 
-                {/* Animated particles */}
-                <div className="absolute top-4 left-4 w-3 h-3 bg-accent rounded-full animate-pulse"></div>
-                <div className="absolute top-1/2 right-4 w-2 h-2 bg-blue-500 rounded-full animate-pulse delay-500"></div>
-                <div className="absolute bottom-4 left-1/3 w-2 h-2 bg-purple-500 rounded-full animate-pulse delay-1000"></div>
+                {/* Animated luxury particles */}
+                <div className="absolute top-6 left-6 w-4 h-4 bg-accent rounded-full animate-pulse-luxury shadow-glow"></div>
+                <div className="absolute top-1/2 right-6 w-3 h-3 bg-accent-secondary rounded-full animate-pulse-luxury delay-500 shadow-glow"></div>
+                <div className="absolute bottom-6 left-1/3 w-3 h-3 bg-accent-tertiary rounded-full animate-pulse-luxury delay-1000 shadow-glow"></div>
               </div>
             </div>
             
-            {/* Floating elements */}
-            <div className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-primary rounded-full opacity-60 animate-float-gentle shadow-premium"></div>
-            <div className="absolute -bottom-6 -left-6 w-8 h-8 bg-gradient-secondary rounded-full opacity-40 animate-float-gentle delay-1000 shadow-elegant"></div>
-            <div className="absolute top-1/2 -left-4 w-6 h-6 bg-accent rounded-full opacity-30 animate-pulse delay-500"></div>
+            {/* Luxury floating elements */}
+            <div className="absolute -top-8 -right-8 w-16 h-16 bg-gradient-hero rounded-full opacity-60 animate-float-luxury shadow-luxury"></div>
+            <div className="absolute -bottom-8 -left-8 w-12 h-12 bg-gradient-secondary rounded-full opacity-40 animate-float-luxury delay-1000 shadow-luxury"></div>
+            <div className="absolute top-1/2 -left-6 w-8 h-8 bg-accent rounded-full opacity-30 animate-pulse-luxury delay-500 shadow-glow"></div>
           </div>
         </div>
       </div>
