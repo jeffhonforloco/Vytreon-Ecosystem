@@ -11,7 +11,7 @@ const VytreonHero = () => {
   };
 
   const scrollToEcosystem = () => {
-    const element = document.getElementById('ecosystem');
+    const element = document.getElementById('products');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
