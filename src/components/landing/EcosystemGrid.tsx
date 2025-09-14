@@ -117,57 +117,63 @@ const EcosystemGrid = () => {
   };
 
   return (
-    <section id="products" className="py-24">
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-            <span className="text-foreground">Innovation</span>{' '}
-            <span className="text-muted-foreground">Ecosystem</span>
+    <section id="products" className="space-section bg-gradient-surface">
+      <div className="container mx-auto px-6">
+        <div className="text-center max-w-4xl mx-auto mb-20 animate-slide-up">
+          <h2 className="text-h1 font-heading font-bold tracking-tight mb-8">
+            <span className="text-gradient">Innovation</span>{' '}
+            <span className="text-foreground">Ecosystem</span>
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
+          <p className="text-body-lg text-muted-foreground leading-relaxed">
             Discover our complete portfolio of products spanning AI, travel, commerce, 
-            content creation, and communication technologies.
+            content creation, and communication technologies — all working together seamlessly.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {categories.map((category, categoryIndex) => (
-            <Card key={categoryIndex} className={`p-6 ${category.color} ${category.borderColor} border-2`}>
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold text-foreground mb-2">{category.name}</h3>
-                <div className="h-1 w-16 bg-gradient-to-r from-accent to-primary rounded-full"></div>
+            <Card 
+              key={categoryIndex} 
+              className={`glass-card-premium p-8 ${category.color} border-2 ${category.borderColor} animate-slide-up hover:scale-105 transition-all duration-500`}
+              style={{ animationDelay: `${categoryIndex * 150}ms` }}
+            >
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold text-foreground mb-3">{category.name}</h3>
+                <div className="h-1 w-20 bg-gradient-primary rounded-full"></div>
               </div>
               
-              <div className="space-y-4">
+              <div className="space-y-6">
                 {category.products.map((product, productIndex) => (
                   <div 
                     key={productIndex}
                     onClick={() => handleProductClick(product)}
-                    className={`flex items-center gap-4 p-4 bg-card/80 backdrop-blur-sm rounded-lg border border-border/50 transition-all duration-300 ${
-                      product.url ? 'hover:bg-card cursor-pointer hover:scale-[1.02] hover:shadow-lg' : 'opacity-75'
+                    className={`group flex items-center gap-5 p-5 glass-card rounded-xl border border-border/50 transition-all duration-300 ${
+                      product.url ? 'hover:border-accent/50 cursor-pointer hover:scale-[1.02] shadow-elegant hover:shadow-premium' : 'opacity-75'
                     }`}
                   >
-                    <div className="text-accent">{product.icon}</div>
+                    <div className="text-accent group-hover:scale-110 transition-transform duration-300">
+                      {product.icon}
+                    </div>
                     <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-1">
-                        <h4 className={`font-semibold text-foreground ${product.url ? 'hover:text-accent' : ''}`}>
+                      <div className="flex items-center gap-3 mb-2">
+                        <h4 className={`font-semibold text-foreground ${product.url ? 'group-hover:text-accent' : ''} transition-colors duration-300`}>
                           {product.name}
                         </h4>
                         {product.flagship && (
-                          <Badge variant="secondary" className="text-xs bg-accent/20 text-accent border-accent/30">
+                          <Badge variant="secondary" className="text-xs bg-gradient-primary text-white border-none shadow-elegant">
                             Flagship
                           </Badge>
                         )}
                         {product.comingSoon && (
-                          <Badge variant="outline" className="text-xs">
+                          <Badge variant="outline" className="text-xs border-accent/30 text-accent">
                             Coming Soon
                           </Badge>
                         )}
                         {product.url && (
-                          <ExternalLink size={14} className="text-muted-foreground" />
+                          <ExternalLink size={14} className="text-muted-foreground group-hover:text-accent transition-colors duration-300" />
                         )}
                       </div>
-                      <p className="text-sm text-muted-foreground">{product.description}</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{product.description}</p>
                     </div>
                   </div>
                 ))}
@@ -177,10 +183,12 @@ const EcosystemGrid = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <Card className="inline-block p-6 bg-gradient-to-r from-card to-accent/5 border-accent/20">
-            <p className="text-foreground font-medium mb-2">Single Sign-On Across All Products</p>
-            <p className="text-sm text-muted-foreground">Seamless integration • Unified experience • Enterprise security</p>
+        <div className="text-center mt-20 animate-slide-up delay-500">
+          <Card className="glass-card-premium inline-block p-8 bg-gradient-primary text-white border-none shadow-premium">
+            <p className="font-semibold mb-3 text-lg">Single Sign-On Across All Products</p>
+            <p className="text-white/90 leading-relaxed">
+              Seamless integration • Unified experience • Enterprise security
+            </p>
           </Card>
         </div>
       </div>

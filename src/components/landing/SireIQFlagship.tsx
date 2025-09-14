@@ -23,64 +23,80 @@ const SireIQFlagship = () => {
     title: "Team Collaboration",
     description: "Work together on creative projects"
   }];
-  return <section id="sireiq" className="py-24 bg-card/50">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+  return <section id="sireiq" className="space-section bg-gradient-surface">
+      <div className="container mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Left content */}
-          <div>
-            <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 rounded-full px-4 py-2 mb-6">
+          <div className="animate-slide-up">
+            <div className="inline-flex items-center gap-3 glass-card-premium rounded-full px-5 py-2 mb-8">
+              <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
               <Zap size={16} className="text-accent" />
-              <span className="text-sm font-medium text-accent">Flagship Product</span>
+              <span className="text-sm font-semibold text-accent tracking-wide">Flagship Product</span>
             </div>
             
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-              <span className="text-foreground">SireIQ</span>
-              <br />
-              <span className="text-muted-foreground">Creative Hub</span>
+            <h2 className="text-h1 font-heading font-bold tracking-tight mb-8">
+              <span className="text-gradient block mb-2">SireIQ</span>
+              <span className="text-muted-foreground">Creative Platform</span>
             </h2>
             
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-body-lg text-muted-foreground mb-10 leading-relaxed">
               AI-powered creative platform - Smarter AI Assistant for chat, content & Workflows. 
               All-in-one AI assistant for chatting, coding, content creation, research and workflow automation.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button size="lg" onClick={handleTrySireIQ} className="text-lg px-8 py-4 h-auto group">
+            <div className="flex flex-col sm:flex-row gap-6 mb-16">
+              <Button 
+                size="lg" 
+                onClick={handleTrySireIQ} 
+                className="btn-premium text-lg px-10 py-6 h-auto group rounded-xl font-semibold shadow-premium"
+              >
                 Try SireIQ Free
-                <ExternalLink size={20} className="ml-2 group-hover:scale-110 transition-transform" />
+                <ExternalLink size={20} className="ml-2 group-hover:scale-110 transition-transform duration-300" />
               </Button>
-              
             </div>
             
             {/* Feature grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {features.map((feature, index) => <div key={index} className="flex items-start gap-3">
-                  <div className="text-accent mt-1">{feature.icon}</div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-1">{feature.title}</h4>
-                    <p className="text-sm text-muted-foreground">{feature.description}</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {features.map((feature, index) => 
+                <div key={index} className="glass-card p-4 rounded-xl group hover:scale-105 transition-all duration-300">
+                  <div className="flex items-start gap-4">
+                    <div className="text-accent mt-1 group-hover:scale-110 transition-transform duration-300">
+                      {feature.icon}
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">{feature.title}</h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
+                    </div>
                   </div>
-                </div>)}
+                </div>
+              )}
             </div>
           </div>
           
           {/* Right visual */}
-          <div className="relative">
-            <Card className="p-8 bg-gradient-to-br from-card via-card to-accent/5 border-accent/20">
-              <div className="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-accent/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-                    <Zap size={32} className="text-accent" />
+          <div className="relative animate-slide-up delay-200">
+            <div className="glass-card-premium p-10 rounded-3xl shadow-premium">
+              <div className="aspect-video bg-gradient-to-br from-accent/10 via-blue-500/10 to-purple-500/10 rounded-2xl flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-mesh-gradient opacity-30"></div>
+                <div className="text-center z-10">
+                  <div className="w-32 h-32 bg-gradient-primary rounded-full flex items-center justify-center mb-6 mx-auto shadow-premium animate-glow-pulse">
+                    <Zap size={40} className="text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">SireIQ Demo</h3>
-                  <p className="text-muted-foreground">Interactive preview coming soon</p>
+                  <h3 className="text-2xl font-bold text-foreground mb-3">SireIQ Platform</h3>
+                  <p className="text-muted-foreground">Experience the future of AI creativity</p>
                 </div>
+                
+                {/* Animated particles */}
+                <div className="absolute top-4 left-4 w-3 h-3 bg-accent rounded-full animate-pulse"></div>
+                <div className="absolute top-1/2 right-4 w-2 h-2 bg-blue-500 rounded-full animate-pulse delay-500"></div>
+                <div className="absolute bottom-4 left-1/3 w-2 h-2 bg-purple-500 rounded-full animate-pulse delay-1000"></div>
               </div>
-            </Card>
+            </div>
             
             {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 w-8 h-8 bg-accent rounded-full opacity-60 animate-pulse"></div>
-            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-primary rounded-full opacity-40 animate-pulse delay-1000"></div>
+            <div className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-primary rounded-full opacity-60 animate-float-gentle shadow-premium"></div>
+            <div className="absolute -bottom-6 -left-6 w-8 h-8 bg-gradient-secondary rounded-full opacity-40 animate-float-gentle delay-1000 shadow-elegant"></div>
+            <div className="absolute top-1/2 -left-4 w-6 h-6 bg-accent rounded-full opacity-30 animate-pulse delay-500"></div>
           </div>
         </div>
       </div>
