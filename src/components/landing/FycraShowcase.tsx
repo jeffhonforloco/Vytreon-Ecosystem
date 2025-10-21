@@ -99,102 +99,102 @@ const FycraShowcase = () => {
                   {/* Animated gradient background */}
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-blue-500/20 to-pink-500/20 rounded-2xl animate-pulse"></div>
                   
-                  {/* Fycra Logo SVG - Accurate Infinity Symbol */}
+                  {/* Fycra Logo - Exact Match */}
                   <div className="relative z-10">
-                    <svg viewBox="0 0 512 512" className="w-80 h-80">
+                    <svg viewBox="0 0 900 600" className="w-full h-full max-w-lg">
                       <defs>
-                        {/* Multiple gradient definitions for different sections */}
-                        <linearGradient id="fycra-blue" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" style={{stopColor: '#0047FF', stopOpacity: 1}} />
-                          <stop offset="100%" style={{stopColor: '#0096FF', stopOpacity: 1}} />
+                        {/* Gradient definitions matching actual Fycra logo */}
+                        <linearGradient id="fycra-gradient-1" x1="0%" y1="50%" x2="50%" y2="0%">
+                          <stop offset="0%" style={{stopColor: '#1e3a8a', stopOpacity: 1}} />
+                          <stop offset="50%" style={{stopColor: '#3b82f6', stopOpacity: 1}} />
+                          <stop offset="100%" style={{stopColor: '#60a5fa', stopOpacity: 1}} />
                         </linearGradient>
-                        <linearGradient id="fycra-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" style={{stopColor: '#00D4FF', stopOpacity: 1}} />
-                          <stop offset="100%" style={{stopColor: '#00FFF0', stopOpacity: 1}} />
+                        
+                        <linearGradient id="fycra-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" style={{stopColor: '#60a5fa', stopOpacity: 1}} />
+                          <stop offset="50%" style={{stopColor: '#06b6d4', stopOpacity: 1}} />
+                          <stop offset="100%" style={{stopColor: '#22d3ee', stopOpacity: 1}} />
                         </linearGradient>
-                        <linearGradient id="fycra-pink-top" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" style={{stopColor: '#FF00FF', stopOpacity: 1}} />
-                          <stop offset="100%" style={{stopColor: '#00D4FF', stopOpacity: 1}} />
+                        
+                        <linearGradient id="fycra-gradient-3" x1="0%" y1="100%" x2="100%" y2="0%">
+                          <stop offset="0%" style={{stopColor: '#22d3ee', stopOpacity: 1}} />
+                          <stop offset="50%" style={{stopColor: '#a855f7', stopOpacity: 1}} />
+                          <stop offset="100%" style={{stopColor: '#ec4899', stopOpacity: 1}} />
                         </linearGradient>
-                        <linearGradient id="fycra-pink" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" style={{stopColor: '#FF0080', stopOpacity: 1}} />
-                          <stop offset="100%" style={{stopColor: '#FF00FF', stopOpacity: 1}} />
+                        
+                        <linearGradient id="fycra-gradient-4" x1="100%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" style={{stopColor: '#ec4899', stopOpacity: 1}} />
+                          <stop offset="50%" style={{stopColor: '#f43f5e', stopOpacity: 1}} />
+                          <stop offset="100%" style={{stopColor: '#dc2626', stopOpacity: 1}} />
                         </linearGradient>
-                        <linearGradient id="fycra-red" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" style={{stopColor: '#CC0000', stopOpacity: 1}} />
-                          <stop offset="100%" style={{stopColor: '#FF0055', stopOpacity: 1}} />
+                        
+                        <linearGradient id="fycra-gradient-5" x1="100%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" style={{stopColor: '#dc2626', stopOpacity: 1}} />
+                          <stop offset="50%" style={{stopColor: '#f97316', stopOpacity: 1}} />
+                          <stop offset="100%" style={{stopColor: '#eab308', stopOpacity: 1}} />
                         </linearGradient>
-                        <linearGradient id="fycra-yellow" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" style={{stopColor: '#A0FF00', stopOpacity: 1}} />
-                          <stop offset="100%" style={{stopColor: '#FFFF00', stopOpacity: 1}} />
+                        
+                        <linearGradient id="fycra-gradient-6" x1="100%" y1="50%" x2="0%" y2="50%">
+                          <stop offset="0%" style={{stopColor: '#eab308', stopOpacity: 1}} />
+                          <stop offset="50%" style={{stopColor: '#84cc16', stopOpacity: 1}} />
+                          <stop offset="100%" style={{stopColor: '#22c55e', stopOpacity: 1}} />
                         </linearGradient>
                       </defs>
                       
-                      {/* Flowing infinity symbol with multiple colored segments */}
-                      {/* Top left curve - Dark Blue */}
+                      {/* Smooth flowing infinity symbol */}
                       <path
-                        d="M 90,180 Q 100,120 140,110 Q 180,100 200,140"
-                        stroke="url(#fycra-blue)"
-                        strokeWidth="32"
-                        strokeLinecap="round"
+                        d="M 150,300 C 150,200 200,150 280,180 C 340,205 380,250 450,250 C 520,250 560,205 620,180 C 700,150 750,200 750,300 C 750,400 700,450 620,420 C 560,395 520,350 450,350 C 380,350 340,395 280,420 C 200,450 150,400 150,300 Z"
                         fill="none"
-                        className="animate-pulse"
-                        style={{animationDelay: '0s'}}
+                        stroke="url(#fycra-gradient-1)"
+                        strokeWidth="45"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="opacity-90"
                       />
                       
-                      {/* Top middle curve - Cyan to Blue */}
                       <path
-                        d="M 200,140 Q 220,180 256,180 Q 292,180 312,140"
-                        stroke="url(#fycra-cyan)"
-                        strokeWidth="32"
-                        strokeLinecap="round"
+                        d="M 180,260 C 200,200 240,170 300,190 C 350,205 390,240 450,240"
                         fill="none"
-                        className="animate-pulse"
-                        style={{animationDelay: '0.1s'}}
+                        stroke="url(#fycra-gradient-2)"
+                        strokeWidth="45"
+                        strokeLinecap="round"
+                        className="opacity-95"
                       />
                       
-                      {/* Top right small curve - Pink/Cyan */}
                       <path
-                        d="M 312,140 Q 332,100 372,110 Q 412,120 422,180"
-                        stroke="url(#fycra-pink-top)"
-                        strokeWidth="32"
-                        strokeLinecap="round"
+                        d="M 450,240 C 510,240 550,205 600,190 C 660,170 700,200 720,260"
                         fill="none"
-                        className="animate-pulse"
-                        style={{animationDelay: '0.2s'}}
+                        stroke="url(#fycra-gradient-3)"
+                        strokeWidth="45"
+                        strokeLinecap="round"
+                        className="opacity-95"
                       />
                       
-                      {/* Right side curve - Magenta/Pink */}
                       <path
-                        d="M 422,180 Q 432,240 392,280 Q 352,320 312,280"
-                        stroke="url(#fycra-pink)"
-                        strokeWidth="32"
-                        strokeLinecap="round"
+                        d="M 720,340 C 700,400 660,430 600,410 C 550,395 510,360 450,360"
                         fill="none"
-                        className="animate-pulse"
-                        style={{animationDelay: '0.3s'}}
+                        stroke="url(#fycra-gradient-4)"
+                        strokeWidth="45"
+                        strokeLinecap="round"
+                        className="opacity-95"
                       />
                       
-                      {/* Bottom middle - Red/Pink */}
                       <path
-                        d="M 312,280 Q 292,240 256,240 Q 220,240 200,280"
-                        stroke="url(#fycra-red)"
-                        strokeWidth="32"
-                        strokeLinecap="round"
+                        d="M 450,360 C 390,360 350,395 300,410 C 240,430 200,400 180,340"
                         fill="none"
-                        className="animate-pulse"
-                        style={{animationDelay: '0.4s'}}
+                        stroke="url(#fycra-gradient-5)"
+                        strokeWidth="45"
+                        strokeLinecap="round"
+                        className="opacity-95"
                       />
                       
-                      {/* Bottom left curve - Yellow/Green */}
                       <path
-                        d="M 200,280 Q 160,320 120,280 Q 80,240 90,180"
-                        stroke="url(#fycra-yellow)"
-                        strokeWidth="32"
-                        strokeLinecap="round"
+                        d="M 180,300 C 180,320 190,330 210,325 C 250,310 300,280 350,270"
                         fill="none"
-                        className="animate-pulse"
-                        style={{animationDelay: '0.5s'}}
+                        stroke="url(#fycra-gradient-6)"
+                        strokeWidth="40"
+                        strokeLinecap="round"
+                        className="opacity-90"
                       />
                     </svg>
                   </div>
