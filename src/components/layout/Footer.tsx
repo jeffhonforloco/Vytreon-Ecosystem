@@ -19,6 +19,7 @@ const Footer = () => {
   const products = [
     { name: 'SireIQ', url: 'https://sireiq.com' },
     { name: 'Fycra', url: 'https://www.fycra.com' },
+    { name: 'CaptionIQ', url: 'https://www.captioniq.io' },
     { name: 'SEOAgentPro', url: 'https://seoagentpro.com' },
     { name: 'Escazo', url: 'https://www.escazo.com' },
     { name: 'Oowo', url: 'https://oowo.io' },

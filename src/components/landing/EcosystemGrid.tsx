@@ -15,7 +15,7 @@ const EcosystemGrid = () => {
       name: "CaptionIQ", 
       description: "AI-powered social media caption generator and analytics platform", 
       icon: <FileText size={24} />, 
-      url: "#",
+      url: "https://www.captioniq.io",
       category: "AI & Creative"
     },
     { 
