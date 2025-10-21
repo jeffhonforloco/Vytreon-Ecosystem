@@ -27,18 +27,21 @@ const FinalCTA = () => {
             <Button 
               onClick={handleTrySireIQ}
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-white px-8 py-6 text-base font-medium rounded-lg h-auto group"
+              className="relative bg-gradient-to-r from-accent to-accent-secondary hover:from-accent/90 hover:to-accent-secondary/90 text-white px-10 py-7 text-lg font-semibold rounded-xl h-auto group overflow-hidden shadow-lg shadow-accent/50 hover:shadow-2xl hover:shadow-accent/60 transition-all duration-300 hover:scale-105"
             >
-              Try SireIQ Free
-              <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
+              <span className="relative z-10 flex items-center">
+                Try SireIQ Free
+                <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
             </Button>
             <Button 
               onClick={handleContact}
               variant="outline" 
               size="lg"
-              className="px-8 py-6 text-base font-medium rounded-lg h-auto border-2 hover:bg-secondary/50"
+              className="px-10 py-7 text-lg font-semibold rounded-xl h-auto glass-strong hover:glass transition-all duration-300 hover:scale-105 border-white/20"
             >
-              <Mail size={18} className="mr-2" />
+              <Mail size={20} className="mr-2" />
               Contact Sales
             </Button>
           </div>

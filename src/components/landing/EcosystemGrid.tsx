@@ -136,13 +136,13 @@ const EcosystemGrid = () => {
             <div 
               key={index}
               onClick={() => handleProductClick(product)}
-              className={`group relative bg-card border border-border rounded-xl p-6 transition-all hover:shadow-lg hover:border-accent/30 ${
+              className={`group relative glass-card rounded-2xl p-6 transition-all duration-500 hover:shadow-2xl hover:shadow-accent/20 hover:border-accent/40 ${
                 product.url && product.url !== '#' ? 'cursor-pointer' : ''
               } ${product.featured ? 'lg:col-span-2 md:col-span-2' : ''}`}
             >
               {/* Featured badge */}
               {product.featured && (
-                <div className="absolute top-4 right-4 inline-flex items-center gap-1 bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-medium">
+                <div className="absolute top-4 right-4 inline-flex items-center gap-1 glass-strong text-accent px-3 py-1.5 rounded-full text-xs font-semibold backdrop-blur-xl">
                   <Sparkles size={12} />
                   <span>Flagship</span>
                 </div>
@@ -150,14 +150,17 @@ const EcosystemGrid = () => {
               
               {/* Coming soon badge */}
               {product.comingSoon && (
-                <div className="absolute top-4 right-4 bg-secondary text-muted-foreground px-3 py-1 rounded-full text-xs font-medium">
+                <div className="absolute top-4 right-4 glass px-3 py-1.5 text-muted-foreground rounded-full text-xs font-medium backdrop-blur-xl">
                   Coming Soon
                 </div>
               )}
               
-              {/* Icon */}
-              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center text-accent mb-4 group-hover:bg-accent group-hover:text-white transition-all">
-                {product.icon}
+              {/* Icon with gradient */}
+              <div className="relative w-14 h-14 rounded-xl flex items-center justify-center text-accent mb-4 group-hover:scale-110 transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent-secondary/20 rounded-xl blur-sm group-hover:blur-md transition-all"></div>
+                <div className="relative glass-strong rounded-xl w-full h-full flex items-center justify-center group-hover:bg-accent/20 transition-all">
+                  {product.icon}
+                </div>
               </div>
               
               {/* Content */}
@@ -182,8 +185,13 @@ const EcosystemGrid = () => {
         </div>
 
         {/* Bottom info */}
-        <div className="text-center mt-16 p-8 bg-secondary/50 rounded-2xl max-w-3xl mx-auto border border-border">
-          <p className="text-base text-foreground font-medium mb-2">
+        <div className="text-center mt-16 p-8 glass-strong rounded-3xl max-w-3xl mx-auto backdrop-blur-xl shadow-xl">
+          <div className="inline-block p-3 glass rounded-2xl mb-4">
+            <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <p className="text-lg text-foreground font-semibold mb-2">
             Unified Access Across All Products
           </p>
           <p className="text-sm text-muted-foreground">

@@ -40,11 +40,14 @@ const VisionStatement = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {values.map((value, index) => (
-            <div key={index} className="text-center">
-              <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center text-accent mx-auto mb-4">
-                {value.icon}
+            <div key={index} className="text-center glass-card rounded-2xl p-6 hover:scale-105 transition-all duration-500 group">
+              <div className="relative w-16 h-16 mx-auto mb-4">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-accent-secondary/30 rounded-xl blur-lg group-hover:blur-xl transition-all"></div>
+                <div className="relative glass-strong rounded-xl w-full h-full flex items-center justify-center text-accent group-hover:text-white group-hover:bg-accent/50 transition-all">
+                  {value.icon}
+                </div>
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">
+              <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-accent transition-colors">
                 {value.title}
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">

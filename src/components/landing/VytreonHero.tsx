@@ -38,33 +38,36 @@ const VytreonHero = () => {
             <Button 
               onClick={scrollToSireIQ}
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-white px-8 py-6 text-base font-medium rounded-lg h-auto group transition-all"
+              className="relative bg-accent hover:bg-accent/90 text-white px-10 py-7 text-lg font-semibold rounded-xl h-auto group transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-accent/50 overflow-hidden"
             >
-              Explore SireIQ
-              <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
+              <span className="relative z-10 flex items-center">
+                Explore SireIQ
+                <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
             </Button>
             <Button 
               onClick={scrollToEcosystem}
               variant="outline" 
               size="lg"
-              className="px-8 py-6 text-base font-medium rounded-lg h-auto border-2 hover:bg-secondary/50 transition-all"
+              className="px-10 py-7 text-lg font-semibold rounded-xl h-auto glass-strong hover:glass transition-all duration-300 hover:scale-105 border-white/20"
             >
               View all products
             </Button>
           </div>
           
-          {/* Clean stats */}
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto pt-12 border-t border-border">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-foreground mb-1">12+</div>
+          {/* Clean stats with glass effect */}
+          <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto pt-12">
+            <div className="text-center glass-card rounded-2xl p-6 hover:scale-105 transition-all duration-300">
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent mb-1">12+</div>
               <div className="text-sm text-muted-foreground">Products</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-foreground mb-1">5</div>
+            <div className="text-center glass-card rounded-2xl p-6 hover:scale-105 transition-all duration-300">
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent mb-1">5</div>
               <div className="text-sm text-muted-foreground">Industries</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-foreground mb-1">Global</div>
+            <div className="text-center glass-card rounded-2xl p-6 hover:scale-105 transition-all duration-300">
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent mb-1">Global</div>
               <div className="text-sm text-muted-foreground">Reach</div>
             </div>
           </div>

@@ -34,19 +34,24 @@ const HowItWorks = () => {
 
         <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
           {steps.map((step, index) => (
-            <div key={index} className="text-center relative">
-              {/* Connector line */}
+            <div key={index} className="text-center relative group">
+              {/* Connector line with glow */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-16 left-[60%] w-[80%] h-0.5 bg-border"></div>
+                <div className="hidden md:block absolute top-16 left-[60%] w-[80%] h-0.5">
+                  <div className="h-full bg-gradient-to-r from-accent/50 to-transparent"></div>
+                </div>
               )}
               
-              <div className="w-24 h-24 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mx-auto mb-6 relative z-10">
-                {step.icon}
+              <div className="relative w-24 h-24 mx-auto mb-6 z-10">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-accent-secondary/30 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
+                <div className="relative glass-strong rounded-2xl w-full h-full flex items-center justify-center text-accent group-hover:scale-110 transition-all duration-500">
+                  {step.icon}
+                </div>
               </div>
-              <div className="absolute top-8 left-1/2 -translate-x-1/2 w-8 h-8 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold">
+              <div className="absolute top-8 left-1/2 -translate-x-1/2 w-10 h-10 bg-gradient-to-br from-accent to-accent-secondary text-white rounded-full flex items-center justify-center text-sm font-bold shadow-lg shadow-accent/50 z-20">
                 {index + 1}
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">
+              <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors">
                 {step.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed">

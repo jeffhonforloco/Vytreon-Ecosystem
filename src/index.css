@@ -193,23 +193,30 @@
     font-weight: 400;
   }
 
-  /* Luxury Background Systems */
-  .hex-grid {
-    background-size: 80px 80px;
-    background-image: 
-      linear-gradient(to right, hsl(var(--accent) / 0.03) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--accent) / 0.03) 1px, transparent 1px);
+  /* Modern glassmorphism effects */
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
   
-  .dot-grid {
-    background-size: 40px 40px;
-    background-image: radial-gradient(circle, hsl(var(--accent) / 0.06) 1px, transparent 1px);
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(24px) saturate(200%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
   }
   
-  .mesh-gradient {
-    background: radial-gradient(at 40% 20%, hsl(var(--accent) / 0.12) 0px, transparent 50%), 
-                radial-gradient(at 80% 0%, hsl(var(--accent-secondary) / 0.12) 0px, transparent 50%), 
-                radial-gradient(at 0% 50%, hsl(var(--accent-tertiary) / 0.12) 0px, transparent 50%);
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
   }
   
   /* Premium Gradients */
