@@ -51,7 +51,7 @@ const EcosystemGrid = () => {
       name: "Escazo", 
       description: "AI-powered travel companion for flights, hotels, and trip insights", 
       icon: <Plane size={24} />, 
-      url: "#",
+      url: "https://www.escazo.com",
       category: "Travel & Lifestyle"
     },
     { 
