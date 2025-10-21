@@ -118,7 +118,7 @@ const EcosystemGrid = () => {
   };
 
   return (
-    <section id="products" className="py-20 md:py-32 bg-white">
+    <section id="products" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -136,7 +136,7 @@ const EcosystemGrid = () => {
             <div 
               key={index}
               onClick={() => handleProductClick(product)}
-              className={`group relative bg-white border border-border rounded-xl p-6 transition-all hover:shadow-lg hover:border-accent/30 ${
+              className={`group relative bg-card border border-border rounded-xl p-6 transition-all hover:shadow-lg hover:border-accent/30 ${
                 product.url && product.url !== '#' ? 'cursor-pointer' : ''
               } ${product.featured ? 'lg:col-span-2 md:col-span-2' : ''}`}
             >

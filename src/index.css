@@ -7,48 +7,48 @@
 
 @layer base {
   :root {
-    /* OpenAI-inspired clean color system */
-    --background: 0 0% 100%;
-    --foreground: 240 8% 12%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 8% 12%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 8% 12%;
-    --primary: 240 8% 12%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 240 5% 96%;
-    --secondary-foreground: 240 8% 12%;
-    --muted: 240 5% 96%;
-    --muted-foreground: 240 4% 46%;
+    /* Dark theme color system */
+    --background: 240 10% 4%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 6%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 6%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 10% 4%;
+    --secondary: 240 8% 12%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 8% 12%;
+    --muted-foreground: 240 4% 58%;
     --accent: 168 76% 42%;
-    --accent-foreground: 0 0% 100%;
+    --accent-foreground: 0 0% 98%;
     --accent-secondary: 217 91% 60%;
     --accent-tertiary: 262 83% 58%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 6% 90%;
-    --input: 240 6% 90%;
+    --border: 240 8% 18%;
+    --input: 240 8% 12%;
     --ring: 168 76% 42%;
     --radius: 0.75rem;
     
-    /* Clean, subtle gradients */
+    /* Dark gradients */
     --gradient-hero: linear-gradient(135deg, hsl(168, 76%, 42%) 0%, hsl(217, 91%, 60%) 100%);
     --gradient-primary: linear-gradient(135deg, hsl(168, 76%, 42%) 0%, hsl(180, 72%, 48%) 100%);
     --gradient-secondary: linear-gradient(135deg, hsl(217, 91%, 60%) 0%, hsl(262, 83%, 58%) 100%);
-    --gradient-surface: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(240, 5%, 98%) 100%);
-    --gradient-glass: linear-gradient(135deg, hsla(0, 0%, 100%, 0.95) 0%, hsla(240, 5%, 98%, 0.9) 100%);
+    --gradient-surface: linear-gradient(180deg, hsl(240, 10%, 4%) 0%, hsl(240, 8%, 8%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsla(240, 10%, 6%, 0.95) 0%, hsla(240, 8%, 12%, 0.9) 100%);
     
-    /* Subtle, clean shadows */
-    --shadow-xs: 0 1px 2px hsla(240, 8%, 12%, 0.04);
-    --shadow-sm: 0 1px 3px hsla(240, 8%, 12%, 0.08), 0 1px 2px hsla(240, 8%, 12%, 0.04);
-    --shadow-md: 0 4px 6px hsla(240, 8%, 12%, 0.06), 0 2px 4px hsla(240, 8%, 12%, 0.04);
-    --shadow-lg: 0 10px 15px hsla(240, 8%, 12%, 0.08), 0 4px 6px hsla(240, 8%, 12%, 0.04);
-    --shadow-xl: 0 20px 25px hsla(240, 8%, 12%, 0.08), 0 8px 10px hsla(240, 8%, 12%, 0.03);
-    --shadow-2xl: 0 25px 50px hsla(240, 8%, 12%, 0.12);
-    --shadow-premium: 0 20px 40px hsla(240, 8%, 12%, 0.08);
-    --shadow-luxury: 0 25px 50px hsla(240, 8%, 12%, 0.10);
-    --shadow-glow: 0 0 20px hsla(168, 76%, 42%, 0.2);
-    --shadow-glow-strong: 0 0 30px hsla(168, 76%, 42%, 0.3);
+    /* Dark mode shadows */
+    --shadow-xs: 0 1px 2px hsla(0, 0%, 0%, 0.1);
+    --shadow-sm: 0 1px 3px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.12);
+    --shadow-md: 0 4px 6px hsla(0, 0%, 0%, 0.14), 0 2px 4px hsla(0, 0%, 0%, 0.12);
+    --shadow-lg: 0 10px 15px hsla(0, 0%, 0%, 0.2), 0 4px 6px hsla(0, 0%, 0%, 0.1);
+    --shadow-xl: 0 20px 25px hsla(0, 0%, 0%, 0.2), 0 8px 10px hsla(0, 0%, 0%, 0.08);
+    --shadow-2xl: 0 25px 50px hsla(0, 0%, 0%, 0.5);
+    --shadow-premium: 0 20px 40px hsla(0, 0%, 0%, 0.3);
+    --shadow-luxury: 0 25px 50px hsla(0, 0%, 0%, 0.4);
+    --shadow-glow: 0 0 20px hsla(168, 76%, 42%, 0.4);
+    --shadow-glow-strong: 0 0 30px hsla(168, 76%, 42%, 0.6);
     
     /* Typography scale */
     --font-size-hero: clamp(3.5rem, 12vw, 12rem);

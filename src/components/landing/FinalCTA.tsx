@@ -12,7 +12,7 @@ const FinalCTA = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-white">
+    <section id="contact" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-6">

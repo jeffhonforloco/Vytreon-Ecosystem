@@ -18,9 +18,9 @@ const VytreonHero = () => {
   };
 
   return (
-    <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden bg-white">
+    <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden bg-background">
       {/* Subtle background pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(168,_225,_206,_0.08),transparent_50%),radial-gradient(circle_at_70%_60%,rgba(111,_168,_220,_0.08),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(16,_163,_127,_0.1),transparent_50%),radial-gradient(circle_at_70%_60%,rgba(111,_168,_220,_0.1),transparent_50%)]"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">

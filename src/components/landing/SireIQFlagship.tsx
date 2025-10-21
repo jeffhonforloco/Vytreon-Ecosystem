@@ -17,7 +17,7 @@ const SireIQFlagship = () => {
   ];
 
   return (
-    <section id="sireiq" className="py-20 md:py-32 bg-secondary/30">
+    <section id="sireiq" className="py-20 md:py-32 bg-secondary/50">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           {/* Left: Content */}
@@ -48,7 +48,7 @@ const SireIQFlagship = () => {
             {/* Feature grid */}
             <div className="grid grid-cols-2 gap-4">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-start gap-3 p-4 bg-white rounded-lg border border-border hover:border-accent/30 transition-all hover:shadow-sm">
+                <div key={index} className="flex items-start gap-3 p-4 bg-card rounded-lg border border-border hover:border-accent/30 transition-all hover:shadow-sm">
                   <div className="text-accent mt-0.5">
                     {feature.icon}
                   </div>
@@ -65,7 +65,7 @@ const SireIQFlagship = () => {
           <div className="relative">
             <div className="relative bg-gradient-to-br from-accent/20 via-accent-secondary/20 to-accent-tertiary/20 rounded-2xl p-12 backdrop-blur">
               {/* Main visual element */}
-              <div className="bg-white rounded-xl shadow-lg p-8 mb-6">
+              <div className="bg-card rounded-xl shadow-lg p-8 mb-6">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
                     <Zap size={20} className="text-white" />
@@ -92,15 +92,15 @@ const SireIQFlagship = () => {
               
               {/* Stats cards */}
               <div className="grid grid-cols-3 gap-3">
-                <div className="bg-white/90 backdrop-blur rounded-lg p-3 text-center">
+                <div className="bg-card/90 backdrop-blur rounded-lg p-3 text-center">
                   <div className="text-lg font-bold text-foreground">50K+</div>
                   <div className="text-xs text-muted-foreground">Users</div>
                 </div>
-                <div className="bg-white/90 backdrop-blur rounded-lg p-3 text-center">
+                <div className="bg-card/90 backdrop-blur rounded-lg p-3 text-center">
                   <div className="text-lg font-bold text-foreground">1M+</div>
                   <div className="text-xs text-muted-foreground">Creations</div>
                 </div>
-                <div className="bg-white/90 backdrop-blur rounded-lg p-3 text-center">
+                <div className="bg-card/90 backdrop-blur rounded-lg p-3 text-center">
                   <div className="text-lg font-bold text-foreground">24/7</div>
                   <div className="text-xs text-muted-foreground">Available</div>
                 </div>
