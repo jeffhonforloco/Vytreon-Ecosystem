@@ -23,6 +23,7 @@ const Footer = () => {
     { name: 'SEOAgentPro', url: 'https://seoagentpro.com' },
     { name: 'Escazo', url: 'https://www.escazo.com' },
     { name: 'VoxSaga', url: 'https://www.voxsaga.com' },
+    { name: 'WhisApp', url: 'https://www.whisapp.com' },
     { name: 'Oowo', url: 'https://oowo.io' },
     { name: 'Didit360', url: 'https://didit360.com' }
   ];

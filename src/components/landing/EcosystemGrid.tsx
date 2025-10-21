@@ -93,7 +93,7 @@ const EcosystemGrid = () => {
       name: "WhisApp", 
       description: "Encrypted chat with audio journaling for private communication", 
       icon: <MessageSquare size={24} />, 
-      url: "#",
+      url: "https://www.whisapp.com",
       category: "Communication"
     },
     { 
