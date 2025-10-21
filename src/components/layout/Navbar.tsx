@@ -27,6 +27,7 @@ const Navbar = () => {
 
   const menuItems = [
     { id: 'sireiq', label: 'SireIQ' },
+    { id: 'fycra', label: 'Fycra' },
     { id: 'products', label: 'Products' },
     { id: 'contact', label: 'Contact' },
   ];

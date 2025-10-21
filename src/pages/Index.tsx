@@ -4,6 +4,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import VytreonHero from '@/components/landing/VytreonHero';
 import SireIQFlagship from '@/components/landing/SireIQFlagship';
+import FycraShowcase from '@/components/landing/FycraShowcase';
 import EcosystemGrid from '@/components/landing/EcosystemGrid';
 import VisionStatement from '@/components/landing/VisionStatement';
 import HowItWorks from '@/components/landing/HowItWorks';
@@ -21,6 +22,7 @@ const Index = () => {
       <main className="flex-grow">
         <VytreonHero />
         <SireIQFlagship />
+        <FycraShowcase />
         <EcosystemGrid />
         <VisionStatement />
         <HowItWorks />

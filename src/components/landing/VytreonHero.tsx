@@ -10,6 +10,13 @@ const VytreonHero = () => {
     }
   };
 
+  const scrollToFycra = () => {
+    const element = document.getElementById('fycra');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const scrollToEcosystem = () => {
     const element = document.getElementById('products');
     if (element) {

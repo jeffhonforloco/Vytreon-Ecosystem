@@ -34,10 +34,11 @@ const EcosystemGrid = () => {
     },
     { 
       name: "Fycra", 
-      description: "AI-powered YouTube content creation with thumbnails and FaceSwap", 
+      description: "Build production apps with no-code or full-code in minutes", 
       icon: <Video size={24} />, 
-      category: "AI & Creative",
-      comingSoon: true 
+      url: "https://www.fycra.com",
+      category: "Development",
+      featured: true
     },
     { 
       name: "Fycera", 
