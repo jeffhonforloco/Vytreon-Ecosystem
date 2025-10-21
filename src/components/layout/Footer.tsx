@@ -18,11 +18,11 @@ const Footer = () => {
 
   const products = [
     { name: 'SireIQ', url: 'https://sireiq.com' },
+    { name: 'Fycra', url: 'https://www.fycra.com' },
+    { name: 'SEOAgentPro', url: 'https://seoagentpro.com' },
     { name: 'Escazo', url: 'https://escazo.com' },
     { name: 'Oowo', url: 'https://oowo.io' },
-    { name: 'Didit360', url: 'https://didit360.com' },
-    { name: 'WhisApp', url: 'https://whisapp.com' },
-    { name: 'VoxSaga', url: 'https://voxsaga.com' }
+    { name: 'Didit360', url: 'https://didit360.com' }
   ];
 
   return (

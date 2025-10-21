@@ -29,7 +29,7 @@ const EcosystemGrid = () => {
       name: "SEOAgentPro", 
       description: "Intelligent SEO optimization powered by advanced AI algorithms", 
       icon: <Search size={24} />, 
-      url: "#",
+      url: "https://seoagentpro.com",
       category: "AI & Creative"
     },
     { 
