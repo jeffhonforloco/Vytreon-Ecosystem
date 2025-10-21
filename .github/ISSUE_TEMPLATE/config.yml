@@ -1,0 +1,15 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 Community Discussion
+    url: https://github.com/vytreon/discussions
+    about: Ask questions and discuss ideas with the community
+  - name: 📖 Documentation
+    url: https://github.com/vytreon/docs
+    about: Check our documentation for answers
+  - name: 🌐 Website
+    url: https://vytreon.com
+    about: Visit our official website
+  - name: 📧 Email Support
+    url: mailto:info@vytreon.com
+    about: Contact us directly for support
+

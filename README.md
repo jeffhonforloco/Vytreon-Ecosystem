@@ -51,12 +51,60 @@ Frontend: React, Next.js, TailwindCSS
 Backend: Node.js, Express, Supabase / Firebase / AWS (per project)
 AI/ML: OpenAI, Hugging Face, NVIDIA APIs
 DevOps: GitHub Actions, Cloudflare, Vercel
+
+## 🚀 Development & Deployment
+
+### Getting Started
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Run linter
+npm run lint
+```
+
+### CI/CD Pipeline
+This project uses GitHub Actions for automated testing and deployment:
+
+- **Continuous Integration**: Runs on every push and PR
+  - Linting and code quality checks
+  - Build verification on Node.js 18.x and 20.x
+  
+- **Continuous Deployment**: Auto-deploys to GitHub Pages on main branch
+  - Production builds
+  - Automated releases
+  
+- **Security Scanning**: CodeQL analysis for vulnerability detection
+
+📖 **Full CI/CD Setup Guide**: See [`.github/CICD_SETUP.md`](.github/CICD_SETUP.md)
+
+### Branch Strategy
+- `main` - Production-ready code (protected, auto-deploys)
+- `develop` - Development branch (CI checks)
+- `feature/*` - Feature branches (merge to develop)
 🤝 Contributing
-We welcome contributions to Vytreon’s ecosystem.
-Fork the repo
-Create a new branch (feature/your-feature)
-Commit your changes
-Submit a pull request
+We welcome contributions to Vytreon's ecosystem.
+
+1. Fork the repo
+2. Create a new branch (`git checkout -b feature/your-feature`)
+3. Make your changes
+4. Run tests and linter (`npm run lint`)
+5. Commit your changes (`git commit -m 'Add some feature'`)
+6. Push to the branch (`git push origin feature/your-feature`)
+7. Open a Pull Request
+
+All PRs must pass CI checks before merging. Please follow the Pull Request template.
+
+📋 **Contributing Guide**: See [`CONTRIBUTING.md`](CONTRIBUTING.md) for detailed guidelines.
 📬 Contact
 🌐 Website: vytreon.com
 💡 Flagship: sireiq.com
