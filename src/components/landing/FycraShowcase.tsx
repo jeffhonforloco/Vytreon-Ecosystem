@@ -48,18 +48,20 @@ const FycraShowcase = () => {
                 <span className="text-sm font-medium text-purple-400">No-Code + Full-Code</span>
               </div>
               
-              <h2 className="text-5xl md:text-6xl font-bold tracking-tight text-foreground mb-6">
-                Fycra
+              <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-6">
+                <span className="text-foreground">Build something </span>
+                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  amazing
+                </span>
               </h2>
               
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-                Build production apps with no-code or full-code. Seamlessly switch between visual 
-                creation and developer IDE.
+                Create full-stack apps by chatting with AI. No signup required to start.
               </p>
 
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Deploy to web, iOS, and Android in minutes. The perfect tool for designers who code 
-                and developers who design.
+                Build production apps with no-code or full-code. Seamlessly switch between visual 
+                creation and developer IDE. Deploy to web, iOS, and Android in minutes.
               </p>
               
               <Button 
@@ -97,38 +99,102 @@ const FycraShowcase = () => {
                   {/* Animated gradient background */}
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-blue-500/20 to-pink-500/20 rounded-2xl animate-pulse"></div>
                   
-                  {/* Fycra Logo SVG - Colorful Infinity Wave */}
+                  {/* Fycra Logo SVG - Accurate Infinity Symbol */}
                   <div className="relative z-10">
-                    <svg viewBox="0 0 200 200" className="w-64 h-64">
+                    <svg viewBox="0 0 512 512" className="w-80 h-80">
                       <defs>
-                        <linearGradient id="fycra-gradient-1" x1="0%" y1="0%" x2="100%" y2="0%">
-                          <stop offset="0%" style={{stopColor: '#3B82F6', stopOpacity: 1}} />
-                          <stop offset="50%" style={{stopColor: '#8B5CF6', stopOpacity: 1}} />
-                          <stop offset="100%" style={{stopColor: '#EC4899', stopOpacity: 1}} />
+                        {/* Multiple gradient definitions for different sections */}
+                        <linearGradient id="fycra-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" style={{stopColor: '#0047FF', stopOpacity: 1}} />
+                          <stop offset="100%" style={{stopColor: '#0096FF', stopOpacity: 1}} />
                         </linearGradient>
-                        <linearGradient id="fycra-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
-                          <stop offset="0%" style={{stopColor: '#EC4899', stopOpacity: 1}} />
-                          <stop offset="50%" style={{stopColor: '#F59E0B', stopOpacity: 1}} />
-                          <stop offset="100%" style={{stopColor: '#EAB308', stopOpacity: 1}} />
+                        <linearGradient id="fycra-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" style={{stopColor: '#00D4FF', stopOpacity: 1}} />
+                          <stop offset="100%" style={{stopColor: '#00FFF0', stopOpacity: 1}} />
+                        </linearGradient>
+                        <linearGradient id="fycra-pink-top" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" style={{stopColor: '#FF00FF', stopOpacity: 1}} />
+                          <stop offset="100%" style={{stopColor: '#00D4FF', stopOpacity: 1}} />
+                        </linearGradient>
+                        <linearGradient id="fycra-pink" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" style={{stopColor: '#FF0080', stopOpacity: 1}} />
+                          <stop offset="100%" style={{stopColor: '#FF00FF', stopOpacity: 1}} />
+                        </linearGradient>
+                        <linearGradient id="fycra-red" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" style={{stopColor: '#CC0000', stopOpacity: 1}} />
+                          <stop offset="100%" style={{stopColor: '#FF0055', stopOpacity: 1}} />
+                        </linearGradient>
+                        <linearGradient id="fycra-yellow" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" style={{stopColor: '#A0FF00', stopOpacity: 1}} />
+                          <stop offset="100%" style={{stopColor: '#FFFF00', stopOpacity: 1}} />
                         </linearGradient>
                       </defs>
                       
-                      {/* Simplified infinity wave design */}
+                      {/* Flowing infinity symbol with multiple colored segments */}
+                      {/* Top left curve - Dark Blue */}
                       <path
-                        d="M 40 100 Q 60 60, 80 80 T 120 100 Q 140 140, 160 120"
-                        stroke="url(#fycra-gradient-1)"
-                        strokeWidth="16"
+                        d="M 90,180 Q 100,120 140,110 Q 180,100 200,140"
+                        stroke="url(#fycra-blue)"
+                        strokeWidth="32"
                         strokeLinecap="round"
                         fill="none"
                         className="animate-pulse"
+                        style={{animationDelay: '0s'}}
                       />
+                      
+                      {/* Top middle curve - Cyan to Blue */}
                       <path
-                        d="M 160 100 Q 140 60, 120 80 T 80 100 Q 60 140, 40 120"
-                        stroke="url(#fycra-gradient-2)"
-                        strokeWidth="16"
+                        d="M 200,140 Q 220,180 256,180 Q 292,180 312,140"
+                        stroke="url(#fycra-cyan)"
+                        strokeWidth="32"
                         strokeLinecap="round"
                         fill="none"
-                        className="animate-pulse delay-500"
+                        className="animate-pulse"
+                        style={{animationDelay: '0.1s'}}
+                      />
+                      
+                      {/* Top right small curve - Pink/Cyan */}
+                      <path
+                        d="M 312,140 Q 332,100 372,110 Q 412,120 422,180"
+                        stroke="url(#fycra-pink-top)"
+                        strokeWidth="32"
+                        strokeLinecap="round"
+                        fill="none"
+                        className="animate-pulse"
+                        style={{animationDelay: '0.2s'}}
+                      />
+                      
+                      {/* Right side curve - Magenta/Pink */}
+                      <path
+                        d="M 422,180 Q 432,240 392,280 Q 352,320 312,280"
+                        stroke="url(#fycra-pink)"
+                        strokeWidth="32"
+                        strokeLinecap="round"
+                        fill="none"
+                        className="animate-pulse"
+                        style={{animationDelay: '0.3s'}}
+                      />
+                      
+                      {/* Bottom middle - Red/Pink */}
+                      <path
+                        d="M 312,280 Q 292,240 256,240 Q 220,240 200,280"
+                        stroke="url(#fycra-red)"
+                        strokeWidth="32"
+                        strokeLinecap="round"
+                        fill="none"
+                        className="animate-pulse"
+                        style={{animationDelay: '0.4s'}}
+                      />
+                      
+                      {/* Bottom left curve - Yellow/Green */}
+                      <path
+                        d="M 200,280 Q 160,320 120,280 Q 80,240 90,180"
+                        stroke="url(#fycra-yellow)"
+                        strokeWidth="32"
+                        strokeLinecap="round"
+                        fill="none"
+                        className="animate-pulse"
+                        style={{animationDelay: '0.5s'}}
                       />
                     </svg>
                   </div>
