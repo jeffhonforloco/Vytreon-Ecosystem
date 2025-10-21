@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Lightbulb, Code2, FileText, BarChart3, Sparkles } from 'lucide-react';
+import SireIQChat from './SireIQChat';
 
 const SireIQFlagship = () => {
+  const [showChat, setShowChat] = useState(false);
+  
   const handleTrySireIQ = () => {
     window.open('https://sireiq.com', '_blank');
   };
@@ -61,7 +64,34 @@ const SireIQFlagship = () => {
             </p>
           </div>
 
+          {/* Interactive Demo Toggle */}
+          <div className="max-w-5xl mx-auto mb-8">
+            <div className="flex justify-center gap-4">
+              <button
+                onClick={() => setShowChat(false)}
+                className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+                  !showChat
+                    ? 'glass-strong text-accent'
+                    : 'glass-card text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                Product Overview
+              </button>
+              <button
+                onClick={() => setShowChat(true)}
+                className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+                  showChat
+                    ? 'glass-strong text-accent'
+                    : 'glass-card text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                Try Interactive Demo
+              </button>
+            </div>
+          </div>
+
           {/* Product Showcase - SireIQ Interface */}
+          {!showChat ? (
           <div className="max-w-5xl mx-auto mb-12">
             <div className="glass-strong rounded-3xl p-8 md:p-12 shadow-2xl">
               {/* Action Cards Grid */}
@@ -125,6 +155,11 @@ const SireIQFlagship = () => {
               </div>
             </div>
           </div>
+          ) : (
+            <div className="mb-12">
+              <SireIQChat />
+            </div>
+          )}
 
           {/* CTA */}
           <div className="text-center">
