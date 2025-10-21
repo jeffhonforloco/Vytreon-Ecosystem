@@ -86,7 +86,7 @@ const EcosystemGrid = () => {
       name: "VoxSaga", 
       description: "AI-powered podcast creation, hosting, and monetization platform", 
       icon: <Headphones size={24} />, 
-      url: "#",
+      url: "https://www.voxsaga.com",
       category: "Entertainment"
     },
     { 
