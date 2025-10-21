@@ -107,7 +107,7 @@ const EcosystemGrid = () => {
       name: "iXhare", 
       description: "Smart content sharing platform for seamless collaboration", 
       icon: <Share2 size={24} />, 
-      url: "#",
+      url: "https://www.ixhare.com",
       category: "Communication"
     }
   ];
