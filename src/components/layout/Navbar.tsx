@@ -1,9 +1,7 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import { useState } from 'react';
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -27,27 +25,23 @@ const Navbar = () => {
     }
   };
 
-  const handleGetNotified = () => {
-    window.open('https://vytreon.com/notify', '_blank');
-  };
-
   const menuItems = [
-    { id: 'about', label: 'About' },
+    { id: 'sireiq', label: 'SireIQ' },
     { id: 'products', label: 'Products' },
-    { id: 'how-it-works', label: 'How it Works' },
     { id: 'contact', label: 'Contact' },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-vytreon-dark/90 border-b border-vytreon-cyan/20">
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
+      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-2">
           <img 
             src="/lovable-uploads/8e349754-a378-4d24-aa39-58005d777cc5.png" 
             alt="Vytreon Logo" 
-            className="h-10 w-auto" 
+            className="h-8 w-auto" 
           />
-          <span className="font-heading text-2xl font-extrabold text-white">Vytreon</span>
+          <span className="text-xl font-bold text-foreground">Vytreon</span>
         </Link>
 
         {/* Desktop Menu */}
@@ -56,22 +50,22 @@ const Navbar = () => {
             <button 
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className="text-white hover:text-vytreon-cyan transition-colors cursor-pointer font-semibold text-lg"
+              className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
             >
               {item.label}
             </button>
           ))}
           <Button 
-            onClick={handleGetNotified}
-            className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white font-bold px-6 py-2"
+            onClick={() => window.open('https://sireiq.com', '_blank')}
+            className="bg-accent hover:bg-accent/90 text-white px-6 rounded-lg"
           >
-            Get Notified
+            Get Started
           </Button>
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white p-2"
+          className="md:hidden text-foreground p-2"
           onClick={toggleMobileMenu}
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -80,22 +74,22 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-vytreon-dark-blue/95 backdrop-blur-lg border-b border-vytreon-cyan/20 px-4 py-4 animate-fade-in">
+        <div className="md:hidden bg-white border-b border-border px-6 py-4">
           <div className="flex flex-col space-y-4">
             {menuItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-white hover:text-vytreon-cyan px-2 py-2 transition-colors cursor-pointer font-semibold text-left"
+                className="text-muted-foreground hover:text-foreground text-left text-sm font-medium transition-colors"
               >
                 {item.label}
               </button>
             ))}
             <Button 
-              onClick={handleGetNotified}
-              className="bg-gradient-to-r from-vytreon-cyan to-vytreon-blue hover:from-vytreon-blue hover:to-vytreon-cyan text-white w-full font-bold"
+              onClick={() => window.open('https://sireiq.com', '_blank')}
+              className="bg-accent hover:bg-accent/90 text-white w-full"
             >
-              Get Notified
+              Get Started
             </Button>
           </div>
         </div>

@@ -1,195 +1,194 @@
 import React from 'react';
-import { Card } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { ExternalLink, Brain, Plane, CreditCard, Music, MessageSquare, Share2, Video, Search, Headphones, FileText } from 'lucide-react';
+import { ExternalLink, Brain, Plane, CreditCard, Music, MessageSquare, Share2, Video, Search, Headphones, Heart, FileText, Sparkles } from 'lucide-react';
 
 const EcosystemGrid = () => {
-  const categories = [
-    {
-      name: "AI & Intelligence",
-      color: "bg-gradient-to-r from-accent/20 to-primary/20",
-      borderColor: "border-accent/30",
-      products: [
-        { 
-          name: "SireIQ", 
-          description: "All-in-one AI creative hub", 
-          icon: <Brain size={20} />, 
-          url: "https://sireiq.com",
-          flagship: true
-        },
-        { 
-          name: "CumnIQ", 
-          description: "Communication AI assistant", 
-          icon: <Brain size={20} />, 
-          url: "https://cumniq.com" 
-        },
-        { 
-          name: "SEOAgentPro", 
-          description: "AI-powered SEO optimization", 
-          icon: <Search size={20} />, 
-          url: "https://seoagentpro.com" 
-        }
-      ]
+  const products = [
+    { 
+      name: "SireIQ", 
+      description: "All-in-one AI creative platform for chat, content, code, and collaboration", 
+      icon: <Brain size={24} />, 
+      url: "https://sireiq.com",
+      category: "AI & Creative",
+      featured: true
     },
-    {
-      name: "Travel & Commerce",
-      color: "bg-gradient-to-r from-blue-500/20 to-purple-500/20",
-      borderColor: "border-blue-500/30",
-      products: [
-        { 
-          name: "Escazo", 
-          description: "All-in-one travel platform", 
-          icon: <Plane size={20} />, 
-          url: "https://escazo.com" 
-        },
-        { 
-          name: "Oowo", 
-          description: "Payments & trading platform", 
-          icon: <CreditCard size={20} />, 
-          url: "https://oowo.io" 
-        }
-      ]
+    { 
+      name: "CaptionIQ", 
+      description: "AI-powered social media caption generator and analytics platform", 
+      icon: <FileText size={24} />, 
+      url: "#",
+      category: "AI & Creative"
     },
-    {
-      name: "Content & Media",
-      color: "bg-gradient-to-r from-purple-500/20 to-pink-500/20",
-      borderColor: "border-purple-500/30",
-      products: [
-        { 
-          name: "Didit360", 
-          description: "Complete music & digital media", 
-          icon: <Music size={20} />, 
-          url: "https://didit360.com" 
-        },
-        { 
-          name: "Voxsaga", 
-          description: "Podcast hosting platform", 
-          icon: <Headphones size={20} />, 
-          url: "https://voxsaga.com" 
-        },
-        { 
-          name: "Fycera", 
-          description: "AI video creation", 
-          icon: <Video size={20} />, 
-          comingSoon: true 
-        },
-        { 
-          name: "Auralora", 
-          description: "Audio content management", 
-          icon: <Headphones size={20} />, 
-          comingSoon: true 
-        }
-      ]
+    { 
+      name: "CumnIQ", 
+      description: "IQ-focused social platform with gamification and AI recommendations", 
+      icon: <Brain size={24} />, 
+      url: "#",
+      category: "AI & Creative"
     },
-    {
-      name: "Communication",
-      color: "bg-gradient-to-r from-green-500/20 to-cyan-500/20",
-      borderColor: "border-green-500/30",
-      products: [
-        { 
-          name: "WhisApp", 
-          description: "Audio travel companion", 
-          icon: <MessageSquare size={20} />, 
-          url: "https://whisapp.com" 
-        },
-        { 
-          name: "iXhare", 
-          description: "Smart content sharing", 
-          icon: <Share2 size={20} />, 
-          url: "https://ixhare.com" 
-        },
-        { 
-          name: "Chattrer", 
-          description: "Advanced chat features", 
-          icon: <MessageSquare size={20} />, 
-          comingSoon: true 
-        }
-      ]
+    { 
+      name: "SEOAgentPro", 
+      description: "Intelligent SEO optimization powered by advanced AI algorithms", 
+      icon: <Search size={24} />, 
+      url: "#",
+      category: "AI & Creative"
+    },
+    { 
+      name: "Fycra", 
+      description: "AI-powered YouTube content creation with thumbnails and FaceSwap", 
+      icon: <Video size={24} />, 
+      category: "AI & Creative",
+      comingSoon: true 
+    },
+    { 
+      name: "Fycera", 
+      description: "Advanced video creation with Nvidia-level AI processing", 
+      icon: <Video size={24} />, 
+      category: "AI & Creative",
+      comingSoon: true 
+    },
+    { 
+      name: "Escazo", 
+      description: "AI-powered travel companion for flights, hotels, and trip insights", 
+      icon: <Plane size={24} />, 
+      url: "#",
+      category: "Travel & Lifestyle"
+    },
+    { 
+      name: "Urs79", 
+      description: "AI-enhanced matchmaking and dating platform for meaningful connections", 
+      icon: <Heart size={24} />, 
+      url: "#",
+      category: "Travel & Lifestyle"
+    },
+    { 
+      name: "Oowo", 
+      description: "AI-enhanced global payment and trade system for seamless transactions", 
+      icon: <CreditCard size={24} />, 
+      url: "#",
+      category: "Digital Finance"
+    },
+    { 
+      name: "Didit360", 
+      description: "Music streaming and MusicNFT platform for artists and fans", 
+      icon: <Music size={24} />, 
+      url: "#",
+      category: "Entertainment"
+    },
+    { 
+      name: "Auralora", 
+      description: "Audiobook platform with AI narration and immersive storytelling", 
+      icon: <Headphones size={24} />, 
+      category: "Entertainment",
+      comingSoon: true 
+    },
+    { 
+      name: "VoxSaga", 
+      description: "AI-powered podcast creation, hosting, and monetization platform", 
+      icon: <Headphones size={24} />, 
+      url: "#",
+      category: "Entertainment"
+    },
+    { 
+      name: "WhisApp", 
+      description: "Encrypted chat with audio journaling for private communication", 
+      icon: <MessageSquare size={24} />, 
+      url: "#",
+      category: "Communication"
+    },
+    { 
+      name: "Chattrer", 
+      description: "Privacy-focused messaging alternative with advanced features", 
+      icon: <MessageSquare size={24} />, 
+      category: "Communication",
+      comingSoon: true 
+    },
+    { 
+      name: "iXhare", 
+      description: "Smart content sharing platform for seamless collaboration", 
+      icon: <Share2 size={24} />, 
+      url: "#",
+      category: "Communication"
     }
   ];
 
   const handleProductClick = (product: any) => {
-    if (product.url) {
+    if (product.url && product.url !== '#') {
       window.open(product.url, '_blank');
-    } else {
-      alert(`${product.name} is coming soon! Stay tuned for updates.`);
     }
   };
 
   return (
-    <section id="products" className="space-section bg-gradient-surface">
+    <section id="products" className="py-20 md:py-32 bg-white">
       <div className="container mx-auto px-6">
-        <div className="text-center max-w-4xl mx-auto mb-20 animate-slide-up">
-          <h2 className="text-h1 font-heading font-bold tracking-tight mb-8">
-            <span className="text-gradient">Innovation</span>{' '}
-            <span className="text-foreground">Ecosystem</span>
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-6">
+            Our Products
           </h2>
-          <p className="text-body-lg text-muted-foreground leading-relaxed">
-            Discover our complete portfolio of products spanning AI, travel, commerce, 
-            content creation, and communication technologies — all working together seamlessly.
+          <p className="text-xl text-muted-foreground leading-relaxed">
+            Explore our complete ecosystem of AI-powered tools and platforms across multiple industries.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {categories.map((category, categoryIndex) => (
-            <Card 
-              key={categoryIndex} 
-              className={`glass-card-premium p-8 ${category.color} border-2 ${category.borderColor} animate-slide-up hover:scale-105 transition-all duration-500`}
-              style={{ animationDelay: `${categoryIndex * 150}ms` }}
+        {/* Product Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          {products.map((product, index) => (
+            <div 
+              key={index}
+              onClick={() => handleProductClick(product)}
+              className={`group relative bg-white border border-border rounded-xl p-6 transition-all hover:shadow-lg hover:border-accent/30 ${
+                product.url && product.url !== '#' ? 'cursor-pointer' : ''
+              } ${product.featured ? 'lg:col-span-2 md:col-span-2' : ''}`}
             >
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold text-foreground mb-3">{category.name}</h3>
-                <div className="h-1 w-20 bg-gradient-primary rounded-full"></div>
+              {/* Featured badge */}
+              {product.featured && (
+                <div className="absolute top-4 right-4 inline-flex items-center gap-1 bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-medium">
+                  <Sparkles size={12} />
+                  <span>Flagship</span>
+                </div>
+              )}
+              
+              {/* Coming soon badge */}
+              {product.comingSoon && (
+                <div className="absolute top-4 right-4 bg-secondary text-muted-foreground px-3 py-1 rounded-full text-xs font-medium">
+                  Coming Soon
+                </div>
+              )}
+              
+              {/* Icon */}
+              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center text-accent mb-4 group-hover:bg-accent group-hover:text-white transition-all">
+                {product.icon}
               </div>
               
-              <div className="space-y-6">
-                {category.products.map((product, productIndex) => (
-                  <div 
-                    key={productIndex}
-                    onClick={() => handleProductClick(product)}
-                    className={`group flex items-center gap-5 p-5 glass-card rounded-xl border border-border/50 transition-all duration-300 ${
-                      product.url ? 'hover:border-accent/50 cursor-pointer hover:scale-[1.02] shadow-elegant hover:shadow-premium' : 'opacity-75'
-                    }`}
-                  >
-                    <div className="text-accent group-hover:scale-110 transition-transform duration-300">
-                      {product.icon}
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-2">
-                        <h4 className={`font-semibold text-foreground ${product.url ? 'group-hover:text-accent' : ''} transition-colors duration-300`}>
-                          {product.name}
-                        </h4>
-                        {product.flagship && (
-                          <Badge variant="secondary" className="text-xs bg-gradient-primary text-white border-none shadow-elegant">
-                            Flagship
-                          </Badge>
-                        )}
-                        {product.comingSoon && (
-                          <Badge variant="outline" className="text-xs border-accent/30 text-accent">
-                            Coming Soon
-                          </Badge>
-                        )}
-                        {product.url && (
-                          <ExternalLink size={14} className="text-muted-foreground group-hover:text-accent transition-colors duration-300" />
-                        )}
-                      </div>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{product.description}</p>
-                    </div>
-                  </div>
-                ))}
+              {/* Content */}
+              <div className="mb-3">
+                <div className="flex items-center gap-2 mb-2">
+                  <h3 className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors">
+                    {product.name}
+                  </h3>
+                  {product.url && product.url !== '#' && (
+                    <ExternalLink size={14} className="text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                  )}
+                </div>
+                <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
+                  {product.description}
+                </p>
+                <div className="text-xs text-muted-foreground font-medium">
+                  {product.category}
+                </div>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-20 animate-slide-up delay-500">
-          <Card className="glass-card-premium inline-block p-8 bg-gradient-primary text-white border-none shadow-premium">
-            <p className="font-semibold mb-3 text-lg">Single Sign-On Across All Products</p>
-            <p className="text-white/90 leading-relaxed">
-              Seamless integration • Unified experience • Enterprise security
-            </p>
-          </Card>
+        {/* Bottom info */}
+        <div className="text-center mt-16 p-8 bg-secondary/50 rounded-2xl max-w-3xl mx-auto border border-border">
+          <p className="text-base text-foreground font-medium mb-2">
+            Unified Access Across All Products
+          </p>
+          <p className="text-sm text-muted-foreground">
+            Single sign-on • Seamless integration • Enterprise security
+          </p>
         </div>
       </div>
     </section>

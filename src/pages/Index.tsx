@@ -11,7 +11,7 @@ import FinalCTA from '@/components/landing/FinalCTA';
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Vytreon Group – Parent of SireIQ & Next-Gen Innovations";
+    document.title = "Vytreon - Technology That Powers Innovation";
   }, []);
 
   return (
