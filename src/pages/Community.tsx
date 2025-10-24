@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import { Users, MessageCircle, Github, Twitter, Linkedin, Youtube, Heart, Trophy, Zap, ArrowRight } from 'lucide-react';
+import { Users, MessageCircle, Github, Twitter, Linkedin, Youtube, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Community = () => {
@@ -9,62 +9,40 @@ const Community = () => {
     {
       name: "Discord Community",
       icon: <MessageCircle size={32} />,
-      description: "Join 50,000+ developers, creators, and innovators in real-time discussions",
-      members: "50K+ Members",
+      description: "Join developers, creators, and innovators in real-time discussions",
+      members: "Join Now",
       color: "from-purple-500 to-indigo-500"
     },
     {
       name: "GitHub",
       icon: <Github size={32} />,
       description: "Contribute to open-source projects and explore our repositories",
-      members: "15K+ Stars",
+      members: "View Repos",
       color: "from-gray-500 to-gray-700"
     },
     {
       name: "Twitter/X",
       icon: <Twitter size={32} />,
       description: "Stay updated with the latest news, features, and community highlights",
-      members: "100K+ Followers",
+      members: "Follow Us",
       color: "from-blue-400 to-blue-600"
     },
     {
       name: "LinkedIn",
       icon: <Linkedin size={32} />,
       description: "Connect with professionals and explore career opportunities",
-      members: "25K+ Followers",
+      members: "Connect",
       color: "from-blue-600 to-blue-800"
     },
     {
       name: "YouTube",
       icon: <Youtube size={32} />,
       description: "Watch tutorials, product demos, and community showcases",
-      members: "75K+ Subscribers",
+      members: "Subscribe",
       color: "from-red-500 to-red-700"
     }
   ];
 
-  const stats = [
-    {
-      icon: <Users size={24} />,
-      value: "200K+",
-      label: "Community Members"
-    },
-    {
-      icon: <Heart size={24} />,
-      value: "1M+",
-      label: "Projects Created"
-    },
-    {
-      icon: <Trophy size={24} />,
-      value: "500+",
-      label: "Contributors"
-    },
-    {
-      icon: <Zap size={24} />,
-      value: "24/7",
-      label: "Active Support"
-    }
-  ];
 
   const communityPrograms = [
     {
@@ -115,19 +93,6 @@ const Community = () => {
               <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
-            {stats.map((stat, index) => (
-              <div key={index} className="glass-card rounded-2xl p-6 text-center hover:shadow-xl hover:shadow-accent/20 transition-all duration-300">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg glass-strong text-accent mb-3">
-                  {stat.icon}
-                </div>
-                <div className="text-3xl font-bold text-foreground mb-1">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -161,13 +126,6 @@ const Community = () => {
 
                 <div className="glass px-4 py-2 rounded-full inline-block text-sm text-accent font-medium">
                   {channel.members}
-                </div>
-
-                <div className="mt-6">
-                  <a href="#" className="flex items-center gap-2 text-sm text-accent hover:gap-3 transition-all group/link">
-                    Join Now
-                    <ArrowRight size={14} />
-                  </a>
                 </div>
               </div>
             ))}
