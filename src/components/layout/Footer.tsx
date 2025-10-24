@@ -118,7 +118,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Vytreon Group, LLC. All rights reserved.
+            © {new Date().getFullYear()} Vytreon Inc. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link to="/privacy" className="text-sm text-muted-foreground hover:text-accent transition-colors">Privacy</Link>

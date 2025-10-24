@@ -198,7 +198,7 @@ const Contact = () => {
               <MapPin size={28} className="text-accent" />
             </div>
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Vytreon Group, LLC
+              Vytreon Inc.
             </h2>
             <p className="text-lg text-muted-foreground mb-2">
               Global Headquarters

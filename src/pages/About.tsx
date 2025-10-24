@@ -32,7 +32,7 @@ const About = () => {
   ];
 
   const milestones = [
-    { year: "2025", title: "Founded", description: "Vytreon Group established with a vision to innovate across AI, technology, and digital services" },
+    { year: "2025", title: "Founded", description: "Vytreon Inc. established with a vision to innovate across AI, technology, and digital services" },
     { year: "2025", title: "Product Launch", description: "Building flagship products SireIQ and Fycra" },
     { year: "2025", title: "Ecosystem Expansion", description: "Rapidly developing 12+ products across multiple industries" }
   ];
@@ -60,7 +60,7 @@ const About = () => {
             </h1>
             
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              Founded in 2025, Vytreon Group is building a new generation of AI-powered tools and platforms that transform how people work, create, and connect.
+              Founded in 2025, Vytreon Inc. is building a new generation of AI-powered tools and platforms that transform how people work, create, and connect.
             </p>
           </div>
         </div>

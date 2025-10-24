@@ -30,7 +30,7 @@ const HeroSection = () => {
               </span>
             </h1>
             <p className="text-gray-300 text-lg mb-8 max-w-2xl font-medium">
-              Vytreon Group is building a decentralized ecosystem that spans mobility, finance, 
+              Vytreon Inc. is building a decentralized ecosystem that spans mobility, finance, 
               energy, digital payments, content creation, and metaverse infrastructure with 
               immersive experiences and AI-powered personalization.
             </p>
