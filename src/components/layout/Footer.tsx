@@ -89,7 +89,7 @@ const Footer = () => {
           <div className="col-span-1">
             <h3 className="text-sm font-semibold text-foreground mb-4">Resources</h3>
             <ul className="space-y-3">
-              <li><Link to="/documentation" className="text-sm text-muted-foreground hover:text-accent transition-colors">Documentation</Link></li>
+              <li><Link to="/docs" className="text-sm text-muted-foreground hover:text-accent transition-colors">Documentation</Link></li>
               <li><Link to="/api" className="text-sm text-muted-foreground hover:text-accent transition-colors">API</Link></li>
               <li><Link to="/blog" className="text-sm text-muted-foreground hover:text-accent transition-colors">Blog</Link></li>
               <li><Link to="/community" className="text-sm text-muted-foreground hover:text-accent transition-colors">Community</Link></li>
