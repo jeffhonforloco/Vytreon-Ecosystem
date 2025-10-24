@@ -4,7 +4,7 @@ import { Twitter, Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   const handleEmailClick = () => {
-    window.location.href = 'mailto:info@vytreon.com';
+    window.location.href = 'mailto:info@vytreon.com,vytreongroup@gmail.com';
   };
 
   const handleSocialClick = (platform: string) => {

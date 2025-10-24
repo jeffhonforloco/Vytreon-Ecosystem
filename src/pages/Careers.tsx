@@ -227,7 +227,7 @@ const Careers = () => {
                 </div>
 
                 <Button 
-                  onClick={() => window.location.href = 'mailto:careers@vytreon.com?subject=Application for ' + job.title}
+                  onClick={() => window.location.href = 'mailto:info@vytreon.com,vytreongroup@gmail.com?subject=Application for ' + job.title}
                   className="w-full bg-accent hover:bg-accent/90 text-white"
                 >
                   Apply Now
@@ -278,7 +278,7 @@ const Careers = () => {
               Don't see a position that fits? Send us your resume anyway. We're always looking for exceptional talent.
             </p>
             <a 
-              href="mailto:careers@vytreon.com"
+              href="mailto:info@vytreon.com,vytreongroup@gmail.com?subject=Job Application - Resume Submission"
               className="inline-block bg-gradient-to-r from-accent to-accent-secondary hover:from-accent/90 hover:to-accent-secondary/90 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105"
             >
               Send Your Resume

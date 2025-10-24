@@ -9,41 +9,41 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: <Mail size={24} />,
-      title: "Email",
+      title: "General Inquiries",
       detail: "info@vytreon.com",
-      action: "mailto:info@vytreon.com",
+      action: "mailto:info@vytreon.com,vytreongroup@gmail.com",
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: <Building2 size={24} />,
-      title: "Careers",
-      detail: "careers@vytreon.com",
-      action: "mailto:careers@vytreon.com",
+      title: "Careers & Jobs",
+      detail: "info@vytreon.com",
+      action: "mailto:info@vytreon.com,vytreongroup@gmail.com?subject=Career Inquiry",
       color: "from-purple-500 to-pink-500"
     },
     {
       icon: <MessageSquare size={24} />,
       title: "Support",
-      detail: "support@vytreon.com",
-      action: "mailto:support@vytreon.com",
+      detail: "info@vytreon.com",
+      action: "mailto:info@vytreon.com,vytreongroup@gmail.com?subject=Support Request",
       color: "from-emerald-500 to-teal-500"
     },
     {
       icon: <Phone size={24} />,
-      title: "Business",
-      detail: "business@vytreon.com",
-      action: "mailto:business@vytreon.com",
+      title: "Business & Partners",
+      detail: "vytreongroup@gmail.com",
+      action: "mailto:info@vytreon.com,vytreongroup@gmail.com?subject=Business Inquiry",
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const departments = [
     { name: "General Inquiries", email: "info@vytreon.com" },
-    { name: "Sales & Partnerships", email: "business@vytreon.com" },
-    { name: "Customer Support", email: "support@vytreon.com" },
-    { name: "Press & Media", email: "press@vytreon.com" },
-    { name: "Careers", email: "careers@vytreon.com" },
-    { name: "Legal", email: "legal@vytreon.com" }
+    { name: "Sales & Partnerships", email: "vytreongroup@gmail.com" },
+    { name: "Customer Support", email: "info@vytreon.com" },
+    { name: "Press & Media", email: "info@vytreon.com" },
+    { name: "Careers", email: "info@vytreon.com" },
+    { name: "Legal", email: "info@vytreon.com" }
   ];
 
   return (
