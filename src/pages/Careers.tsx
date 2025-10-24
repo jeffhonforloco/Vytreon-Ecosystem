@@ -1,7 +1,8 @@
 import React from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import { Briefcase, Heart, Rocket, Users, Code, Palette, BarChart, Globe } from 'lucide-react';
+import { Briefcase, Heart, Rocket, Users, Code, Palette, BarChart, Globe, MapPin, Clock, DollarSign } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const Careers = () => {
   const benefits = [
@@ -27,34 +28,102 @@ const Careers = () => {
     }
   ];
 
-  const departments = [
+  const jobOpenings = [
     {
-      icon: <Code size={32} />,
-      name: "Engineering",
-      description: "Build cutting-edge AI products and scalable systems",
-      openings: "Multiple positions",
+      title: "Senior Software Engineer",
+      department: "Engineering",
+      location: "Remote",
+      type: "Full-time",
+      description: "Build scalable backend systems and APIs for our AI-powered products",
       color: "from-blue-500 to-cyan-500"
     },
     {
-      icon: <Palette size={32} />,
-      name: "Design",
-      description: "Create beautiful, intuitive user experiences",
-      openings: "2 positions",
-      color: "from-purple-500 to-pink-500"
+      title: "Frontend Developer (React)",
+      department: "Engineering",
+      location: "Remote",
+      type: "Full-time",
+      description: "Create beautiful, responsive user interfaces for web applications",
+      color: "from-blue-500 to-cyan-500"
     },
     {
-      icon: <BarChart size={32} />,
-      name: "Product",
-      description: "Shape the future of our product ecosystem",
-      openings: "3 positions",
+      title: "Cloud Engineer (AWS/Azure)",
+      department: "Engineering",
+      location: "Remote",
+      type: "Full-time",
+      description: "Design and maintain cloud infrastructure for our product ecosystem",
+      color: "from-purple-500 to-indigo-500"
+    },
+    {
+      title: "Data Scientist",
+      department: "AI & Data",
+      location: "Remote",
+      type: "Full-time",
+      description: "Develop machine learning models and analyze data to drive product insights",
       color: "from-emerald-500 to-teal-500"
     },
     {
-      icon: <Users size={32} />,
-      name: "Operations",
-      description: "Drive efficiency and scale across the organization",
-      openings: "2 positions",
+      title: "Data Analyst",
+      department: "AI & Data",
+      location: "Remote",
+      type: "Full-time",
+      description: "Transform data into actionable insights to improve our products",
+      color: "from-emerald-500 to-teal-500"
+    },
+    {
+      title: "UI/UX Designer",
+      department: "Design",
+      location: "Remote",
+      type: "Full-time",
+      description: "Design intuitive, user-centered experiences across our product suite",
+      color: "from-pink-500 to-rose-500"
+    },
+    {
+      title: "Product Designer",
+      department: "Design",
+      location: "Remote",
+      type: "Full-time",
+      description: "Shape the visual identity and user experience of flagship products",
+      color: "from-pink-500 to-rose-500"
+    },
+    {
+      title: "DevOps Engineer",
+      department: "Engineering",
+      location: "Remote",
+      type: "Full-time",
+      description: "Build and maintain CI/CD pipelines and deployment infrastructure",
       color: "from-orange-500 to-red-500"
+    },
+    {
+      title: "Product Manager",
+      department: "Product",
+      location: "Remote",
+      type: "Full-time",
+      description: "Drive product strategy and roadmap for key product initiatives",
+      color: "from-violet-500 to-purple-500"
+    },
+    {
+      title: "Full Stack Developer",
+      department: "Engineering",
+      location: "Remote",
+      type: "Full-time",
+      description: "Work across frontend and backend to deliver end-to-end features",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Mobile Developer (React Native)",
+      department: "Engineering",
+      location: "Remote",
+      type: "Full-time",
+      description: "Build cross-platform mobile applications for iOS and Android",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "QA Engineer",
+      department: "Engineering",
+      location: "Remote",
+      type: "Full-time",
+      description: "Ensure product quality through comprehensive testing strategies",
+      color: "from-cyan-500 to-teal-500"
     }
   ];
 
@@ -115,37 +184,54 @@ const Careers = () => {
         </div>
       </section>
 
-      {/* Open Positions by Department */}
+      {/* Open Positions */}
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-foreground mb-4">Open Positions</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore opportunities across different departments
+              Join our team and help build the future of AI-powered products
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {departments.map((dept, index) => (
+          <div className="grid md:grid-cols-2 gap-6">
+            {jobOpenings.map((job, index) => (
               <div
                 key={index}
-                className="glass-card rounded-2xl p-8 hover:shadow-2xl hover:shadow-accent/20 transition-all duration-500 group cursor-pointer"
+                className="glass-card rounded-2xl p-6 hover:shadow-2xl hover:shadow-accent/20 transition-all duration-300 group"
               >
-                <div className={`relative w-16 h-16 rounded-xl flex items-center justify-center text-white mb-6 bg-gradient-to-br ${dept.color}`}>
-                  {dept.icon}
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
+                      {job.title}
+                    </h3>
+                    <div className={`inline-block px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${job.color} text-white`}>
+                      {job.department}
+                    </div>
+                  </div>
                 </div>
-
-                <h3 className="text-2xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors">
-                  {dept.name}
-                </h3>
                 
-                <p className="text-muted-foreground mb-4 leading-relaxed">
-                  {dept.description}
+                <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
+                  {job.description}
                 </p>
 
-                <div className="glass px-4 py-2 rounded-full inline-block text-sm text-accent font-medium">
-                  {dept.openings}
+                <div className="flex flex-wrap gap-3 mb-4">
+                  <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                    <MapPin size={14} className="text-accent" />
+                    {job.location}
+                  </div>
+                  <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                    <Clock size={14} className="text-accent" />
+                    {job.type}
+                  </div>
                 </div>
+
+                <Button 
+                  onClick={() => window.location.href = 'mailto:careers@vytreon.com?subject=Application for ' + job.title}
+                  className="w-full bg-accent hover:bg-accent/90 text-white"
+                >
+                  Apply Now
+                </Button>
               </div>
             ))}
           </div>
