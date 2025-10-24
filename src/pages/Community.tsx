@@ -9,10 +9,10 @@ const Community = () => {
     {
       name: "Discord Community",
       icon: <MessageCircle size={32} />,
-      description: "Connect with vytreon on Discord for real-time discussions",
-      members: "@vytreon",
+      description: "Add Vytreon on Discord for real-time discussions and support",
+      members: "Username: Vytreon",
       color: "from-purple-500 to-indigo-500",
-      url: "https://discord.com/users/vytreon"
+      url: "#"
     },
     {
       name: "GitHub",
@@ -93,13 +93,10 @@ const Community = () => {
               Connect with creators, developers, and innovators from around the world. Share ideas, get support, and build together.
             </p>
 
-            <Button 
-              onClick={() => window.open('https://discord.com/users/vytreon', '_blank')}
-              className="bg-gradient-to-r from-accent to-accent-secondary hover:from-accent/90 hover:to-accent-secondary/90 text-white px-8 py-6 text-lg h-auto group"
-            >
-              Connect on Discord
-              <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <div className="glass-strong rounded-2xl p-6 inline-block">
+              <p className="text-lg text-foreground mb-2 font-semibold">Connect on Discord</p>
+              <p className="text-muted-foreground">Username: <span className="text-accent font-medium">Vytreon</span></p>
+            </div>
           </div>
         </div>
       </section>
@@ -118,8 +115,8 @@ const Community = () => {
             {communityChannels.map((channel, index) => (
               <div
                 key={index}
-                onClick={() => window.open(channel.url, '_blank')}
-                className="glass-card rounded-2xl p-8 hover:shadow-2xl hover:shadow-accent/20 transition-all duration-500 group cursor-pointer"
+                onClick={() => channel.url !== '#' && window.open(channel.url, '_blank')}
+                className={`glass-card rounded-2xl p-8 hover:shadow-2xl hover:shadow-accent/20 transition-all duration-500 group ${channel.url !== '#' ? 'cursor-pointer' : 'cursor-default'}`}
               >
                 <div className={`relative w-16 h-16 rounded-xl flex items-center justify-center text-white mb-6 bg-gradient-to-br ${channel.color}`}>
                   {channel.icon}
@@ -192,20 +189,9 @@ const Community = () => {
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               Whether you're a developer, creator, or enthusiast, there's a place for you in the Vytreon community.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Button 
-                onClick={() => window.open('https://discord.com/users/vytreon', '_blank')}
-                className="bg-gradient-to-r from-accent to-accent-secondary hover:from-accent/90 hover:to-accent-secondary/90 text-white px-8 py-6 text-lg h-auto group"
-              >
-                Connect on Discord
-                <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button 
-                variant="outline" 
-                className="glass-card border-border hover:border-accent px-8 py-6 text-lg h-auto"
-              >
-                Explore Programs
-              </Button>
+            <div className="glass-card rounded-2xl p-8 inline-block">
+              <p className="text-2xl text-foreground mb-3 font-bold">Connect on Discord</p>
+              <p className="text-lg text-muted-foreground">Add username: <span className="text-accent font-semibold">Vytreon</span></p>
             </div>
           </div>
         </div>
