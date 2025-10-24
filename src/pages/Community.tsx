@@ -9,37 +9,42 @@ const Community = () => {
     {
       name: "Discord Community",
       icon: <MessageCircle size={32} />,
-      description: "Join developers, creators, and innovators in real-time discussions",
-      members: "Join Now",
-      color: "from-purple-500 to-indigo-500"
+      description: "Connect with vytreon on Discord for real-time discussions",
+      members: "@vytreon",
+      color: "from-purple-500 to-indigo-500",
+      url: "https://discord.com/users/vytreon"
     },
     {
       name: "GitHub",
       icon: <Github size={32} />,
       description: "Contribute to open-source projects and explore our repositories",
       members: "View Repos",
-      color: "from-gray-500 to-gray-700"
+      color: "from-gray-500 to-gray-700",
+      url: "https://github.com/vytreon"
     },
     {
       name: "Twitter/X",
       icon: <Twitter size={32} />,
       description: "Stay updated with the latest news, features, and community highlights",
       members: "Follow Us",
-      color: "from-blue-400 to-blue-600"
+      color: "from-blue-400 to-blue-600",
+      url: "https://twitter.com/vytreon"
     },
     {
       name: "LinkedIn",
       icon: <Linkedin size={32} />,
       description: "Connect with professionals and explore career opportunities",
       members: "Connect",
-      color: "from-blue-600 to-blue-800"
+      color: "from-blue-600 to-blue-800",
+      url: "https://linkedin.com/company/vytreon"
     },
     {
       name: "YouTube",
       icon: <Youtube size={32} />,
       description: "Watch tutorials, product demos, and community showcases",
       members: "Subscribe",
-      color: "from-red-500 to-red-700"
+      color: "from-red-500 to-red-700",
+      url: "https://youtube.com/@vytreon"
     }
   ];
 
@@ -88,8 +93,11 @@ const Community = () => {
               Connect with creators, developers, and innovators from around the world. Share ideas, get support, and build together.
             </p>
 
-            <Button className="bg-gradient-to-r from-accent to-accent-secondary hover:from-accent/90 hover:to-accent-secondary/90 text-white px-8 py-6 text-lg h-auto group">
-              Join Our Discord
+            <Button 
+              onClick={() => window.open('https://discord.com/users/vytreon', '_blank')}
+              className="bg-gradient-to-r from-accent to-accent-secondary hover:from-accent/90 hover:to-accent-secondary/90 text-white px-8 py-6 text-lg h-auto group"
+            >
+              Connect on Discord
               <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
@@ -110,6 +118,7 @@ const Community = () => {
             {communityChannels.map((channel, index) => (
               <div
                 key={index}
+                onClick={() => window.open(channel.url, '_blank')}
                 className="glass-card rounded-2xl p-8 hover:shadow-2xl hover:shadow-accent/20 transition-all duration-500 group cursor-pointer"
               >
                 <div className={`relative w-16 h-16 rounded-xl flex items-center justify-center text-white mb-6 bg-gradient-to-br ${channel.color}`}>
@@ -184,11 +193,17 @@ const Community = () => {
               Whether you're a developer, creator, or enthusiast, there's a place for you in the Vytreon community.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button className="bg-gradient-to-r from-accent to-accent-secondary hover:from-accent/90 hover:to-accent-secondary/90 text-white px-8 py-6 text-lg h-auto group">
-                Join Discord
+              <Button 
+                onClick={() => window.open('https://discord.com/users/vytreon', '_blank')}
+                className="bg-gradient-to-r from-accent to-accent-secondary hover:from-accent/90 hover:to-accent-secondary/90 text-white px-8 py-6 text-lg h-auto group"
+              >
+                Connect on Discord
                 <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" className="glass-card border-border hover:border-accent px-8 py-6 text-lg h-auto">
+              <Button 
+                variant="outline" 
+                className="glass-card border-border hover:border-accent px-8 py-6 text-lg h-auto"
+              >
                 Explore Programs
               </Button>
             </div>
