@@ -9,10 +9,10 @@ const Community = () => {
     {
       name: "Discord Community",
       icon: <MessageCircle size={32} />,
-      description: "Add Vytreon on Discord for real-time discussions and support",
-      members: "Username: Vytreon",
+      description: "Join our Discord server for real-time discussions and support",
+      members: "Join Server",
       color: "from-purple-500 to-indigo-500",
-      url: "#"
+      url: "https://discord.com/channels/1431299549330411682/1431299550135582722"
     },
     {
       name: "GitHub",
@@ -93,10 +93,13 @@ const Community = () => {
               Connect with creators, developers, and innovators from around the world. Share ideas, get support, and build together.
             </p>
 
-            <div className="glass-strong rounded-2xl p-6 inline-block">
-              <p className="text-lg text-foreground mb-2 font-semibold">Connect on Discord</p>
-              <p className="text-muted-foreground">Username: <span className="text-accent font-medium">Vytreon</span></p>
-            </div>
+            <Button 
+              onClick={() => window.open('https://discord.com/channels/1431299549330411682/1431299550135582722', '_blank')}
+              className="bg-gradient-to-r from-accent to-accent-secondary hover:from-accent/90 hover:to-accent-secondary/90 text-white px-8 py-6 text-lg h-auto group"
+            >
+              Join Our Discord
+              <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+            </Button>
           </div>
         </div>
       </section>
@@ -189,9 +192,20 @@ const Community = () => {
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               Whether you're a developer, creator, or enthusiast, there's a place for you in the Vytreon community.
             </p>
-            <div className="glass-card rounded-2xl p-8 inline-block">
-              <p className="text-2xl text-foreground mb-3 font-bold">Connect on Discord</p>
-              <p className="text-lg text-muted-foreground">Add username: <span className="text-accent font-semibold">Vytreon</span></p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button 
+                onClick={() => window.open('https://discord.com/channels/1431299549330411682/1431299550135582722', '_blank')}
+                className="bg-gradient-to-r from-accent to-accent-secondary hover:from-accent/90 hover:to-accent-secondary/90 text-white px-8 py-6 text-lg h-auto group"
+              >
+                Join Discord
+                <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button 
+                variant="outline" 
+                className="glass-card border-border hover:border-accent px-8 py-6 text-lg h-auto"
+              >
+                Explore Programs
+              </Button>
             </div>
           </div>
         </div>
