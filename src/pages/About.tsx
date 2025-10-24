@@ -32,11 +32,9 @@ const About = () => {
   ];
 
   const milestones = [
-    { year: "2020", title: "Founded", description: "Vytreon Group established with a vision to innovate" },
-    { year: "2021", title: "SireIQ Launch", description: "Launched our flagship AI creative platform" },
-    { year: "2022", title: "Ecosystem Growth", description: "Expanded to 5+ products across multiple industries" },
-    { year: "2023", title: "12+ Products", description: "Built a comprehensive ecosystem of AI-powered tools" },
-    { year: "2024", title: "Global Reach", description: "Serving users worldwide with innovative solutions" }
+    { year: "2025", title: "Founded", description: "Vytreon Group established with a vision to innovate across AI, technology, and digital services" },
+    { year: "2025", title: "Product Launch", description: "Building flagship products SireIQ and Fycra" },
+    { year: "2025", title: "Ecosystem Expansion", description: "Rapidly developing 12+ products across multiple industries" }
   ];
 
   return (
@@ -62,7 +60,7 @@ const About = () => {
             </h1>
             
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              Vytreon Group is a technology powerhouse creating AI-powered tools and platforms that transform how people work, create, and connect.
+              Founded in 2025, Vytreon Group is building a new generation of AI-powered tools and platforms that transform how people work, create, and connect.
             </p>
           </div>
         </div>
@@ -83,8 +81,10 @@ const About = () => {
               We believe technology should be accessible, powerful, and transformative.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              From AI creative platforms to travel companions, from communication tools to financial solutions—we're 
-              building an ecosystem where innovation meets simplicity, and technology serves humanity.
+              We're rapidly building an ambitious ecosystem—from our flagship AI creative platform SireIQ and 
+              no-code development tool Fycra, to innovative solutions in travel, communication, entertainment, 
+              and financial technology. Our vision is to create a comprehensive suite of products where 
+              innovation meets simplicity, and technology serves humanity.
             </p>
           </div>
         </div>
