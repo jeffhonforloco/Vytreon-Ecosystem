@@ -33,12 +33,11 @@ const VytreonHero = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Main heading */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground mb-6">
-            Technology that powers innovation
+            Building the foundation for the <span className="bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent">intelligent future</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl mx-auto">
-            Vytreon is building the next generation of AI-powered tools across creative platforms, 
-            communication, travel, and digital services.
+            Vytreon is a global technology group developing next-generation systems in AI, energy, and mobility — an ecosystem of innovation designed to shape the technologies of tomorrow.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">

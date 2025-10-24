@@ -12,7 +12,7 @@ import FinalCTA from '@/components/landing/FinalCTA';
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Vytreon - Technology That Powers Innovation";
+    document.title = "Vytreon — Building the foundation for the intelligent future";
   }, []);
 
   return (
