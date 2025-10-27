@@ -44,8 +44,8 @@ const EcosystemGrid = () => {
       name: "Fycera", 
       description: "Advanced video creation with Nvidia-level AI processing", 
       icon: <Video size={24} />, 
-      category: "AI & Creative",
-      comingSoon: true 
+      url: "https://fycera.com",
+      category: "AI & Creative"
     },
     { 
       name: "Escazo", 
